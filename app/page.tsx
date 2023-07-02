@@ -10,8 +10,8 @@ export default function Home() {
 
             <section className='mb-6 lg:mb-16'>
                 <Container>
-                    <div className='px-4 lg:px-44 py-8 text-center'>
-                        <h3 className='text-4xl lg:text-7xl font-serif text-peach-light leading-snug mb-4'>
+                    <div className='px-0 lg:px-48 py-8 text-center'>
+                        <h3 className='text-4xl lg:text-7xl font-serif text-peach-light lg:leading-normal mb-4'>
                             Create your dream wedding today
                         </h3>
                         <h4 className='text-xl font-light my-8 leading-relaxed text-green italic'>
