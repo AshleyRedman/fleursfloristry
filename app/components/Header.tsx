@@ -1,7 +1,11 @@
+'use client';
+
 import Container from '@/app/components/Container';
 import Image from '@/app/components/Image';
 import Link from '@/app/components/Link';
 import { NavItem } from '@/app/types';
+import { usePathname } from 'next/navigation';
+import { twMerge } from 'tailwind-merge';
 
 export default function Header({ items }: { items: NavItem[] }) {
     return (
@@ -35,8 +39,14 @@ export default function Header({ items }: { items: NavItem[] }) {
 }
 
 function Item({ label, href }: NavItem) {
+    const pathname = usePathname();
     return (
-        <li className='border-t-2 border-black/30 border-b-2 text-black/60 font-serif font-medium text-base 2xl:text-lg italic hover:border-black hover:text-black 2xl:min-w-[80px] text-center transition-all duration-300 ease-in-out'>
+        <li
+            className={twMerge(
+                'border-t-2 border-black/30 border-b-2 text-black/60 font-serif font-medium text-base 2xl:text-lg italic hover:border-black hover:text-black 2xl:min-w-[80px] text-center transition-all duration-300 ease-in-out',
+                pathname === href && 'border-black text-black'
+            )}
+        >
             <Link href={href} className='py-3 block px-1 2xl:px-6'>
                 {label}
             </Link>

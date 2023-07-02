@@ -5,7 +5,7 @@ import Callout from './components/Callout';
 
 export default function Home() {
     return (
-        <div>
+        <>
             <Image
                 filename='banner_bnuaw0'
                 width={1920}
@@ -67,6 +67,6 @@ export default function Home() {
                     </StyledButton>
                 </div>
             </Callout>
-        </div>
+        </>
     );
 }

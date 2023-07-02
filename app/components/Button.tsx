@@ -13,7 +13,10 @@ export default function Button({ ...rest }: AriaButtonProps & ButtonHTMLAttribut
         <button
             {...buttonProps}
             ref={ref}
-            className={twMerge('ring-peach-default outline-none focus:ring focus:rounded', rest.className)}
+            className={twMerge(
+                'ring-peach-default outline-none focus-visible:ring focus-visible:rounded',
+                rest.className
+            )}
         >
             {rest.children}
         </button>
