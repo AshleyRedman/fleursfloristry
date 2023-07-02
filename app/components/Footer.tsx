@@ -5,7 +5,7 @@ import Link from './Link';
 
 export default function Footer({}: {}) {
     return (
-        <footer className=''>
+        <footer className='mt-8'>
             <Container className='pb-6 flex items-center justify-between'>
                 <span className='text-2xl text-peach-default font-serif'>Fleur&apos;s Floristry</span>
                 <ul className='flex items-center space-x-4'>

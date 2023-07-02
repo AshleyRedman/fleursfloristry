@@ -1,8 +1,10 @@
 import Footer from '@/app/components/Footer';
 import Header from '@/app/components/Header';
+import MobileMenu from '@/app/components/MobileMenu';
 import { Analytics } from '@vercel/analytics/react';
 import { Raleway } from 'next/font/google';
 import './globals.css';
+import { NavItem } from './types';
 
 const raleway = Raleway({ subsets: ['latin'], variable: '--raleway', display: 'swap' });
 
@@ -10,6 +12,16 @@ export const metadata = {
     title: "Fleur's Floristry | Luxury Florals That Last A Lifetime",
     description: 'Luxury Florals That Last A Lifetime'
 };
+
+const navItems: NavItem[] = [
+    { label: 'Home', href: '/' },
+    { label: 'About us', href: '/about-us' },
+    { label: 'Prices', href: '/prices' },
+    { label: 'Reviews & Comments', href: '/testimonials' },
+    { label: 'What We Use & Why', href: '/faq' },
+    { label: 'Gallery', href: '/gallery' },
+    { label: 'Contact', href: '/contact' }
+];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -23,11 +35,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <meta name='msapplication-TileColor' content='#ffffff' />
                 <meta name='theme-color' content='#ffffff' />
             </head>
-            <body className={`${raleway.variable} antialiased bg-white text-black space-y-8`}>
-                <Header />
+            <body className={`${raleway.variable} antialiased bg-white text-black`}>
+                <Header items={navItems} />
                 <main>{children}</main>
                 <Footer />
+                <MobileMenu items={navItems} />
             </body>
+
             <Analytics />
         </html>
     );

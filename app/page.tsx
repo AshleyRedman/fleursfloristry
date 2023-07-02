@@ -47,10 +47,10 @@ export default function Home() {
             </section>
 
             <Callout
-                className='space-y-8 lg:space-y-12'
+                className='space-y-8 lg:space-y-10'
                 image={{ filename: 'bouquets_r6ogai', alt: 'bouquets', width: 1280 }}
             >
-                <h3 className='uppercase text-3xl font-light leading-none'>About us</h3>
+                <h3 className='uppercase text-4xl font-light leading-none font-serif'>About us</h3>
                 <p className='lg:w-2/3 leading-loose'>
                     Fleur&apos;s Floristry is a luxury floral business based in the heart of rural Leicestershire. We
                     pride ourselves on creating beautifully bespoke arrangements and packages for any celebration,
@@ -58,7 +58,7 @@ export default function Home() {
                     and silk flowers, we create pieces that will last a lifetime and remain a stunning keepsake for
                     years to come. Why not take a look at the services we can offer you.
                 </p>
-                <div className='lg:space-x-2 space-y-4 lg:space-y-0'>
+                <div className='lg:space-x-3 space-y-4 lg:space-y-0'>
                     <StyledButton link href='/about-us' className=''>
                         Learn more
                     </StyledButton>
