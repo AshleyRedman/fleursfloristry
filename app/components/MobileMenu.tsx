@@ -20,7 +20,7 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
         } else {
             document.body.style.overflow = 'auto';
         }
-    }, [open])
+    }, [open]);
 
     useEffect(() => {
         if (pathname) {

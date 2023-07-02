@@ -6,7 +6,10 @@ export default function Link({ children, ...rest }: LinkProps & HTMLAttributes<H
     return (
         <NextLink
             {...rest}
-            className={twMerge('ring-peach-default outline-none focus-visible:ring focus-visible:rounded', rest.className)}
+            className={twMerge(
+                'ring-peach-default outline-none focus-visible:ring focus-visible:rounded',
+                rest.className
+            )}
         >
             {children}
         </NextLink>

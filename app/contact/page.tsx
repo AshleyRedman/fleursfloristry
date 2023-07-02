@@ -17,7 +17,9 @@ export default function Contact({}: {}) {
                             contact us rgerading your bespoke wedding package.
                         </p>
                         <p>Asfordby, Melton Mowbray</p>
-                        <a href='mailto:enquiries@fleursfloristry.com' className='block underline'>enquiries@fleursfloristry.com</a>
+                        <a href='mailto:enquiries@fleursfloristry.com' className='block underline'>
+                            enquiries@fleursfloristry.com
+                        </a>
                         <p className='font-semibold'>
                             We aim to get back to you within 48 hours, please check your spam/junk for our reply.
                         </p>

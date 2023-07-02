@@ -7,7 +7,5 @@
     "cleanUrls": true,
     "public": false,
     "trailingSlash": false,
-    "regions": [
-        "lhr1"
-    ]
+    "regions": ["lhr1"]
 }
