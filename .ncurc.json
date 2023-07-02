@@ -1,0 +1,8 @@
+{
+    "reject": ["@types/node"],
+    "upgrade": false,
+    "format": ["group"],
+    "packageManager": "pnpm",
+    "cache": true,
+    "verbose": false
+}
