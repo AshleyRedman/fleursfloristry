@@ -38,7 +38,7 @@ export default function ProductListing({
             {!!image && (
                 <div
                     style={{ backgroundImage: `url(${image})` }}
-                    className='mt-8 bg-fixed bg-no-repeat bg-cover bg-center bg-origin-content w-full h-[675px] bg-green'
+                    className='mt-8 bg-fixed bg-no-repeat bg-cover bg-center bg-origin-content w-full h-[350px] lg:h-[675px] bg-green'
                 />
             )}
         </section>
