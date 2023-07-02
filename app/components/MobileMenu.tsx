@@ -15,6 +15,14 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [open])
+
+    useEffect(() => {
         if (pathname) {
             setOpen(false);
         }

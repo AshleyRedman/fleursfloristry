@@ -9,7 +9,7 @@ import { twMerge } from 'tailwind-merge';
 
 export default function Header({ items }: { items: NavItem[] }) {
     return (
-        <header className='mt-12 lg:mt-8 mb-8'>
+        <header className='mt-12 lg:mt-8 shadow pb-8'>
             <Container className='space-y-4 lg:space-y-8'>
                 <h1 className='mx-auto block text-center lg:!-mb-6 w-fit text-3xl lg:text-4xl lg:leading-loose text-peach-default font-serif font-bold'>
                     Fleur&apos;s Floristry

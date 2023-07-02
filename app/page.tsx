@@ -48,7 +48,7 @@ export default function Home() {
 
             <Callout
                 className='space-y-8 lg:space-y-10'
-                image={{ filename: 'bouquets_r6ogai', alt: 'bouquets', width: 1280 }}
+                image={{ filename: 'bouquets_r6ogai', alt: 'bouquets', width: 1280, minHeight: 300 }}
             >
                 <h3 className='uppercase text-4xl font-light leading-none font-serif'>About us</h3>
                 <p className='lg:w-2/3 leading-loose'>

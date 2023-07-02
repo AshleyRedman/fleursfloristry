@@ -2,11 +2,8 @@ import Footer from '@/app/components/Footer';
 import Header from '@/app/components/Header';
 import MobileMenu from '@/app/components/MobileMenu';
 import { Analytics } from '@vercel/analytics/react';
-import { Raleway } from 'next/font/google';
 import './globals.css';
 import { NavItem } from './types';
-
-const raleway = Raleway({ subsets: ['latin'], variable: '--raleway', display: 'swap' });
 
 export const metadata = {
     title: "Fleur's Floristry | Luxury Florals That Last A Lifetime",
@@ -34,8 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#ffffff' />
                 <meta name='msapplication-TileColor' content='#ffffff' />
                 <meta name='theme-color' content='#ffffff' />
+                <link href='https://fonts.cdnfonts.com/css/raleway-5' rel='stylesheet' />
             </head>
-            <body className={`${raleway.variable} antialiased bg-white text-black`}>
+            <body className='antialiased bg-white text-black'>
                 <Header items={navItems} />
                 <main>{children}</main>
                 <Footer />

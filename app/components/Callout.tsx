@@ -7,7 +7,10 @@ export default function Callout({
     image,
     children,
     ...rest
-}: { image: { filename: string; alt: string; width: number }; children: ReactNode } & HTMLAttributes<HTMLDivElement>) {
+}: {
+    image: { filename: string; alt: string; width: number; minHeight: number };
+    children: ReactNode;
+} & HTMLAttributes<HTMLDivElement>) {
     return (
         <section className='bg-gray grid lg:grid-cols-2'>
             <article
@@ -20,7 +23,7 @@ export default function Callout({
                 {children}
             </article>
 
-            <div className='relative min-h-[300px] lg:min-h-0'>
+            <div className='relative !lg:min-h-0' style={{ minHeight: image.minHeight }}>
                 <Image
                     filename={image.filename}
                     width={image.width}
