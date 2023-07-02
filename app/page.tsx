@@ -1,111 +1,59 @@
-import Image from 'next/image';
+import Container from '@/app/components/Container';
+import Image from './components/Image';
+import { StyledButton } from './components/Button';
+import Callout from './components/Callout';
 
 export default function Home() {
     return (
-        <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-            <div className='z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex'>
-                <p className='fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30'>
-                    Get started by editing&nbsp;
-                    <code className='font-mono font-bold'>app/page.tsx</code>
+        <div>
+            <Image filename='banner_bnuaw0' width={1920} className='h-[200px] lg:h-[470px] object-cover w-full' alt='Banner' />
+
+            <section className='mb-6 lg:mb-16'>
+                <Container>
+                    <div className='px-4 lg:px-44 py-8 text-center'>
+                        <h3 className='text-4xl lg:text-7xl font-serif text-peach-light leading-snug mb-4'>
+                            Create your dream wedding today
+                        </h3>
+                        <h4 className='text-xl font-light my-8 leading-relaxed text-green italic'>
+                            From bouquets to banquets, we can provide florals for all occasions no matter how big or
+                            small.
+                        </h4>
+                        <article className='w-full lg:w-2/3 mb-12 mx-auto space-y-6 leading-loose text-black/80'>
+                            <p>
+                                Fleur&apos;s Floristry use only the highest quality dried, silk and faux flowers in
+                                order to design and deliver realistic arrangements throughout all seasons. From
+                                hydrangeas in winter to snowdrops in summer, faux flowers give you the ultimate choice
+                                for any month of the year!
+                            </p>
+                            <p>
+                                We provide a completely bespoke service with no packages to restrict you and no minimum
+                                spends to reach.
+                            </p>
+                            <p>
+                                Why not send us a message for a no obligation chat about your dream day and how we can
+                                work together to achieve the floral arrangements that you always wanted.{' '}
+                            </p>
+                        </article>
+                        <StyledButton link href='/contact'>
+                            Enquire Now
+                        </StyledButton>
+                    </div>
+                </Container>
+            </section>
+
+            <Callout className='space-y-8 lg:space-y-12' image={{ filename: 'bouquets_r6ogai', alt: 'bouquets', width: 1280 }}>
+                <h3 className='uppercase text-3xl font-light leading-none'>About us</h3>
+                <p className='lg:w-2/3 leading-loose'>
+                    Fleur&apos;s Floristry is a luxury floral business based in the heart of rural Leicestershire. We
+                    pride ourselves on creating beautifully bespoke arrangements and packages for any celebration,
+                    specialising in bridal floristry & wedding decoration. Working with only the highest quality faux
+                    and silk flowers, we create pieces that will last a lifetime and remain a stunning keepsake for
+                    years to come. Why not take a look at the services we can offer you.
                 </p>
-                <div className='fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none'>
-                    <a
-                        className='pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0'
-                        href='https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        By{' '}
-                        <Image
-                            src='/vercel.svg'
-                            alt='Vercel Logo'
-                            className='dark:invert'
-                            width={100}
-                            height={24}
-                            priority
-                        />
-                    </a>
-                </div>
-            </div>
-
-            <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-                <Image
-                    className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
-                    src='/next.svg'
-                    alt='Next.js Logo'
-                    width={180}
-                    height={37}
-                    priority
-                />
-            </div>
-
-            <div className='mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left'>
-                <a
-                    href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Docs{' '}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Find in-depth information about Next.js features and API.
-                    </p>
-                </a>
-
-                <a
-                    href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Learn{' '}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Learn about Next.js in an interactive course with&nbsp;quizzes!
-                    </p>
-                </a>
-
-                <a
-                    href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Templates{' '}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Explore the Next.js 13 playground.</p>
-                </a>
-
-                <a
-                    href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-                    className='group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    <h2 className={`mb-3 text-2xl font-semibold`}>
-                        Deploy{' '}
-                        <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
-                            -&gt;
-                        </span>
-                    </h2>
-                    <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                        Instantly deploy your Next.js site to a shareable URL with Vercel.
-                    </p>
-                </a>
-            </div>
-        </main>
+                <StyledButton link href='/prices' className='bg-black text-white'>
+                    Products & Prices
+                </StyledButton>
+            </Callout>
+        </div>
     );
 }

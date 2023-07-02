@@ -8,10 +8,21 @@ module.exports = {
         './app/**/*.{js,ts,jsx,tsx,mdx}'
     ],
     theme: {
-        colors: {},
+        colors: {
+            transparent: 'transparent',
+            white: '#ffffff',
+            black: '#1E1E1C',
+            green: '#6b766b',
+            gray: '#E0E3E0',
+            peach: {
+                light: '#D89792',
+                default: '#B95332',
+                dark: '#7E3C22'
+            }
+        },
         fontFamily: {
-            sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-            serif: ['Luminari', ...defaultTheme.fontFamily.serif]
+            sans: ['Raleway', ...defaultTheme.fontFamily.sans],
+            serif: ['courier new', ...defaultTheme.fontFamily.serif]
         },
         extend: {}
     },
