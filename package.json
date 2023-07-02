@@ -8,9 +8,11 @@
         "start": "next start",
         "lint": "next lint",
         "format": "pnpm prettier . --write",
-        "format:check": "pnpm prettier . --check"
+        "format:check": "pnpm prettier . --check",
+        "packages:check": "npm-check-updates --format group"
     },
     "dependencies": {
+        "@vercel/analytics": "^1.0.1",
         "next": "13.4.7",
         "react": "18.2.0",
         "react-aria": "^3.26.0",
@@ -24,6 +26,7 @@
         "autoprefixer": "10.4.14",
         "eslint": "8.44.0",
         "eslint-config-next": "13.4.7",
+        "npm-check-updates": "^16.10.13",
         "postcss": "8.4.24",
         "prettier": "^2.8.8",
         "tailwindcss": "3.3.2",
