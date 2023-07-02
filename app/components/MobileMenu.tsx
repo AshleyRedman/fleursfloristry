@@ -30,7 +30,10 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
 
     return (
         <>
-            <Button onPress={() => setOpen(true)} className='block lg:hidden fixed top-4 right-6 z-30'>
+            <Button
+                onPress={() => setOpen(true)}
+                className='block lg:hidden fixed top-2 right-4 z-30 bg-white p-2 rounded-full'
+            >
                 <Menu size={28} className='stroke-peach-default' />
             </Button>
 
@@ -53,7 +56,7 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
                             >
                                 <Button
                                     onPress={() => setOpen(false)}
-                                    className='block lg:hidden fixed top-4 right-6 z-40'
+                                    className='block lg:hidden fixed top-4 right-10 z-40'
                                 >
                                     <AlignRight size={28} className='stroke-peach-default' />
                                 </Button>

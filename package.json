@@ -14,10 +14,13 @@
     },
     "dependencies": {
         "@hookform/resolvers": "^3.1.1",
+        "@t3-oss/env-nextjs": "^0.6.0",
         "@vercel/analytics": "^1.0.1",
         "framer-motion": "^10.12.18",
         "lucide-react": "^0.257.0",
         "next": "13.4.7",
+        "nodemailer": "^6.9.3",
+        "nodemailer-sendgrid": "^1.0.3",
         "react": "18.2.0",
         "react-aria": "^3.26.0",
         "react-click-away-listener": "^2.2.3",
@@ -29,6 +32,8 @@
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.3",
         "@types/node": "18.*.*",
+        "@types/nodemailer": "^6.4.8",
+        "@types/nodemailer-sendgrid": "^1.0.0",
         "@types/react": "18.2.14",
         "@types/react-dom": "18.2.6",
         "autoprefixer": "10.4.14",

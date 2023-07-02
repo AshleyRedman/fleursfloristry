@@ -20,9 +20,6 @@ export default function Contact({}: {}) {
                         <a href='mailto:enquiries@fleursfloristry.com' className='block underline'>
                             enquiries@fleursfloristry.com
                         </a>
-                        <p className='font-semibold'>
-                            We aim to get back to you within 48 hours, please check your spam/junk for our reply.
-                        </p>
                     </article>
                     <ContactForm />
                 </Container>
