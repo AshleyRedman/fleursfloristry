@@ -6,7 +6,12 @@ import Callout from './components/Callout';
 export default function Home() {
     return (
         <div>
-            <Image filename='banner_bnuaw0' width={1920} className='h-[200px] lg:h-[470px] object-cover w-full' alt='Banner' />
+            <Image
+                filename='banner_bnuaw0'
+                width={1920}
+                className='h-[200px] lg:h-[470px] object-cover w-full'
+                alt='Banner'
+            />
 
             <section className='mb-6 lg:mb-16'>
                 <Container>
@@ -41,7 +46,10 @@ export default function Home() {
                 </Container>
             </section>
 
-            <Callout className='space-y-8 lg:space-y-12' image={{ filename: 'bouquets_r6ogai', alt: 'bouquets', width: 1280 }}>
+            <Callout
+                className='space-y-8 lg:space-y-12'
+                image={{ filename: 'bouquets_r6ogai', alt: 'bouquets', width: 1280 }}
+            >
                 <h3 className='uppercase text-3xl font-light leading-none'>About us</h3>
                 <p className='lg:w-2/3 leading-loose'>
                     Fleur&apos;s Floristry is a luxury floral business based in the heart of rural Leicestershire. We
@@ -50,9 +58,14 @@ export default function Home() {
                     and silk flowers, we create pieces that will last a lifetime and remain a stunning keepsake for
                     years to come. Why not take a look at the services we can offer you.
                 </p>
-                <StyledButton link href='/prices' className='bg-black text-white'>
-                    Products & Prices
-                </StyledButton>
+                <div className='lg:space-x-2 space-y-4 lg:space-y-0'>
+                    <StyledButton link href='/about-us' className=''>
+                        Learn more
+                    </StyledButton>
+                    <StyledButton link href='/prices' className='bg-black text-white'>
+                        Products & Prices
+                    </StyledButton>
+                </div>
             </Callout>
         </div>
     );
