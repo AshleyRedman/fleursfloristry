@@ -27,6 +27,9 @@ jobs:
             - name: NCU check
               run: pnpm packages:check
 
+            - name: Run tsc
+              run: pnpm types
+
             - name: Run lint
               run: pnpm lint
 
