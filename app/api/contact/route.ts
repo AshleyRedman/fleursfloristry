@@ -19,6 +19,7 @@ export async function POST(request: Request, _: Response) {
             body: `<table>${nameRow}${emailRow}${phoneRow}${addressRow}${dateRow}${messageRow}</table>`,
             subject
         });
+
         const text = `Name: ${name}, Email: ${email}, Phone: ${phone}, Address: ${address}, Event date: ${date}, Message: ${message}`;
         const mailerResponse: { success: boolean; request: { accepted: string[] } } = await send({
             html,
@@ -27,7 +28,7 @@ export async function POST(request: Request, _: Response) {
             to: [to]
         });
 
-        if (!mailerResponse.request.accepted.includes(to)) {
+        if (!mailerResponse.success) {
             throw new Error('Email failed to send.');
         }
 
@@ -35,6 +36,7 @@ export async function POST(request: Request, _: Response) {
             status: 200
         });
     } catch (e) {
+        console.log(e);
         return new Response(JSON.stringify({ success: false }), {
             status: 500
         });
