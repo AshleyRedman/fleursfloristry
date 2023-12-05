@@ -1,6 +1,6 @@
-import { Form } from '@/app/types';
-import { base, send } from '../../lib/mail';
-import { env } from '@/app/lib/env';
+import { Form } from '@/src/types';
+import { base, send } from '../../../lib/mail';
+import { env } from '@/src/lib/env';
 
 export async function POST(request: Request, _: Response) {
     try {

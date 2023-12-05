@@ -1,4 +1,19 @@
-import Callout from '../components/Callout';
+import { PageProps } from '@/src/types';
+import Callout from '../../components/Callout';
+import { Metadata, ResolvingMetadata } from 'next';
+
+export const generateMetadata = async (
+    _: PageProps<{ slug: string }>,
+    parent: ResolvingMetadata
+): Promise<Metadata> => {
+    const siteTitle = (await parent).title?.absolute;
+    const description = (await parent).description;
+
+    return {
+        title: `About us - ${siteTitle}`,
+        description
+    };
+};
 
 export default function AboutUs({}: {}) {
     return (

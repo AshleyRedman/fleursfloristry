@@ -1,8 +1,23 @@
-import ContactForm from '../components/ContactForm';
-import Container from '../components/Container';
+import { PageProps } from '@/src/types';
+import ContactForm from '../../components/ContactForm';
+import Container from '../../components/Container';
+import { Metadata, ResolvingMetadata } from 'next';
 
 const gmap =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4828.574006518088!2d-0.9590257987993733!3d52.76309718066023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879d717fe4a9a97%3A0xbd1683a3ae65909c!2sAsfordby%2C%20Melton%20Mowbray!5e0!3m2!1sen!2suk!4v1688308215648!5m2!1sen!2suk';
+
+export const generateMetadata = async (
+    _: PageProps<{ slug: string }>,
+    parent: ResolvingMetadata
+): Promise<Metadata> => {
+    const siteTitle = (await parent).title?.absolute;
+    const description = (await parent).description;
+
+    return {
+        title: `Contact - ${siteTitle}`,
+        description
+    };
+};
 
 export default function Contact({}: {}) {
     return (

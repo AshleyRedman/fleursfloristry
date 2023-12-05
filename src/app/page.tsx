@@ -1,7 +1,7 @@
-import Container from '@/app/components/Container';
-import Image from './components/Image';
-import { StyledButton } from './components/Button';
-import Callout from './components/Callout';
+import Container from '@/src/components/Container';
+import Image from '../components/Image';
+import { StyledButton } from '../components/Button';
+import Callout from '../components/Callout';
 
 export default function Home() {
     return (

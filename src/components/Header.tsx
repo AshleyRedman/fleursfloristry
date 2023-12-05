@@ -1,9 +1,9 @@
 'use client';
 
-import Container from '@/app/components/Container';
-import Image from '@/app/components/Image';
-import Link from '@/app/components/Link';
-import { NavItem } from '@/app/types';
+import Container from '@/src/components/Container';
+import Image from '@/src/components/Image';
+import Link from '@/src/components/Link';
+import { NavItem } from '@/src/types';
 import { usePathname } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
 

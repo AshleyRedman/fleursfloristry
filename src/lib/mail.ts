@@ -1,4 +1,4 @@
-import { env } from '@/app/lib/env';
+import { env } from '@/src/lib/env';
 import { createTransport, SendMailOptions, SentMessageInfo } from 'nodemailer';
 import sendGrid from 'nodemailer-sendgrid';
 

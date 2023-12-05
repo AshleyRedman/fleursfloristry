@@ -1,5 +1,10 @@
 import { z } from 'zod';
 
+export type PageProps<T> = {
+    params?: T;
+    searchParams: { [key: string]: string | string[] | undefined };
+};
+
 export type NavItem = { label: string; href: string };
 
 export type Testimonial = { body: string; author: string; image?: { src: string; alt: string }; link?: string };

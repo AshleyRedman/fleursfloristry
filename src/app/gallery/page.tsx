@@ -1,6 +1,7 @@
-import Container from '../components/Container';
-import Masonry from '../components/Masonary';
-import { Image } from '../types';
+import Container from '../../components/Container';
+import Masonry from '../../components/Masonary';
+import { Image, PageProps } from '../../types';
+import { Metadata, ResolvingMetadata } from 'next';
 
 const images: Image[] = [
     { src: 'gallery/1_yvruta', alt: '1' },
@@ -67,6 +68,19 @@ const images: Image[] = [
     { src: 'gallery/62_rpgsw3', alt: '62' },
     { src: 'gallery/63_grzhtk', alt: '63' }
 ];
+
+export const generateMetadata = async (
+    _: PageProps<{ slug: string }>,
+    parent: ResolvingMetadata
+): Promise<Metadata> => {
+    const siteTitle = (await parent).title?.absolute;
+    const description = (await parent).description;
+
+    return {
+        title: `Gallery - ${siteTitle}`,
+        description
+    };
+};
 
 export default function Gallery() {
     return (

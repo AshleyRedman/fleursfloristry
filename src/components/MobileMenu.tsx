@@ -1,8 +1,8 @@
 'use client';
 
-import Button from '@/app/components/Button';
-import Link from '@/app/components/Link';
-import { NavItem } from '@/app/types';
+import Button from '@/src/components/Button';
+import Link from '@/src/components/Link';
+import { NavItem } from '@/src/types';
 import { AnimatePresence, motion } from 'framer-motion';
 import { AlignRight, Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';

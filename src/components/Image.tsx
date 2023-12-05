@@ -1,4 +1,4 @@
-import { cloudinary } from '@/app/lib/cdn';
+import { cloudinary } from '@/src/lib/cdn';
 import { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 

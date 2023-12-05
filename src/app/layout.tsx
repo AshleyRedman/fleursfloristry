@@ -1,9 +1,9 @@
-import Footer from '@/app/components/Footer';
-import Header from '@/app/components/Header';
-import MobileMenu from '@/app/components/MobileMenu';
+import Footer from '@/src/components/Footer';
+import Header from '@/src/components/Header';
+import MobileMenu from '@/src/components/MobileMenu';
 import { Analytics } from '@vercel/analytics/react';
-import './globals.css';
-import { NavItem } from './types';
+import '../globals.css';
+import { NavItem } from '../types';
 
 export const metadata = {
     title: "Fleur's Floristry | Luxury Florals That Last A Lifetime",

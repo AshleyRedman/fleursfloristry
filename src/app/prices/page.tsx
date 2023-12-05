@@ -1,6 +1,20 @@
-import ProductListing from '../components/ProductListing';
+import { PageProps } from '@/src/types';
+import ProductListing from '../../components/ProductListing';
+import { cloudinary } from '@/src/lib/cdn';
+import { Metadata, ResolvingMetadata } from 'next';
 
-import { cloudinary } from '@/app/lib/cdn';
+export const generateMetadata = async (
+    _: PageProps<{ slug: string }>,
+    parent: ResolvingMetadata
+): Promise<Metadata> => {
+    const siteTitle = (await parent).title?.absolute;
+    const description = (await parent).description;
+
+    return {
+        title: `Prices - ${siteTitle}`,
+        description
+    };
+};
 
 export default function Prices({}: {}) {
     return (

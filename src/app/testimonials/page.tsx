@@ -1,6 +1,7 @@
-import type { Testimonial as T } from '../types';
-import Testimonial from '../components/Testimonial';
-import Container from '../components/Container';
+import { Metadata, ResolvingMetadata } from 'next';
+import type { PageProps, Testimonial as T } from '../../types';
+import Container from '../../components/Container';
+import Testimonial from '../../components/Testimonial';
 
 const testimonials: T[] = [
     {
@@ -97,6 +98,19 @@ const testimonials: T[] = [
         author: 'Amy-Marie Mcquillan'
     }
 ];
+
+export const generateMetadata = async (
+    _: PageProps<{ slug: string }>,
+    parent: ResolvingMetadata
+): Promise<Metadata> => {
+    const siteTitle = (await parent).title?.absolute;
+    const description = (await parent).description;
+
+    return {
+        title: `Reviews & Comments - ${siteTitle}`,
+        description
+    };
+};
 
 export default function Testimonials() {
     return (

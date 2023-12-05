@@ -1,4 +1,6 @@
-import Container from '../components/Container';
+import { PageProps } from '@/src/types';
+import Container from '../../components/Container';
+import { Metadata, ResolvingMetadata } from 'next';
 
 type FAQ = { title: string; body: string };
 
@@ -28,6 +30,19 @@ const faqs: FAQ[] = [
         body: "In this ever changing climate with freezing temperatures to extreme heat waves, there isn't a worry of wilting or keeping your flowers cool the day and night before you get married. There's no need for risky water buckets to be sat around your dress and veil either!"
     }
 ];
+
+export const generateMetadata = async (
+    _: PageProps<{ slug: string }>,
+    parent: ResolvingMetadata
+): Promise<Metadata> => {
+    const siteTitle = (await parent).title?.absolute;
+    const description = (await parent).description;
+
+    return {
+        title: `FAQ - ${siteTitle}`,
+        description
+    };
+};
 
 export default function FAQ() {
     return (
