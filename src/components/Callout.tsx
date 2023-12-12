@@ -1,7 +1,6 @@
 import { HTMLAttributes, ReactNode } from 'react';
-import Container from './Container';
+import { cn } from '../lib/helpers';
 import Image from './Image';
-import { twMerge } from 'tailwind-merge';
 
 export default function Callout({
     image,
@@ -12,23 +11,23 @@ export default function Callout({
     children: ReactNode;
 } & HTMLAttributes<HTMLDivElement>) {
     return (
-        <section className='bg-gray grid lg:grid-cols-2'>
+        <section className='grid bg-gray lg:grid-cols-2'>
             <article
                 {...rest}
-                className={twMerge(
-                    'py-16 lg:py-24 px-14 lg:px-0 lg:ml-[100px] xl:ml-[150px] 2xl:ml-[400px]',
+                className={cn(
+                    'px-14 py-16 lg:ml-[100px] lg:px-0 lg:py-24 xl:ml-[150px] 2xl:ml-[400px]',
                     rest.className
                 )}
             >
                 {children}
             </article>
 
-            <div className='relative !lg:min-h-0' style={{ minHeight: image.minHeight }}>
+            <div className='!lg:min-h-0 relative' style={{ minHeight: image.minHeight }}>
                 <Image
                     filename={image.filename}
                     width={image.width}
                     alt={image.alt}
-                    className='absolute inset-0 object-cover h-full w-full'
+                    className='absolute inset-0 h-full w-full object-cover'
                 />
             </div>
         </section>

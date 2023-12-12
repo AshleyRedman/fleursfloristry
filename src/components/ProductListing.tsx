@@ -17,15 +17,22 @@ export default function ProductListing({
     return (
         <section>
             <Container>
-                <div className='px-0 lg:px-48 py-8 text-center'>
-                    <h3 className='text-4xl lg:text-7xl font-serif text-peach-light lg:leading-normal'>{title}</h3>
-                    <h4 className='text-xl font-light my-4 leading-relaxed text-green italic'>{subheading}</h4>
+                <div className='px-0 py-8 text-center lg:px-48'>
+                    <h3 className='font-serif text-4xl text-peach-light lg:text-7xl lg:leading-normal'>
+                        {title}
+                    </h3>
+                    <h4 className='my-4 text-xl font-light italic leading-relaxed text-green'>
+                        {subheading}
+                    </h4>
                     <div className='my-8 space-y-6'>
                         <span className='font-bold'>Providing But Not Limited To:</span>
                         <ul className='space-y-4'>
                             {entires.map((e) => (
                                 <li key={e.label}>
-                                    {e.label} - from <span className='font-semibold text-peach-light'>£{e.price}</span>
+                                    {e.label} - from{' '}
+                                    <span className='font-semibold text-peach-light'>
+                                        £{e.price}
+                                    </span>
                                 </li>
                             ))}
                         </ul>
@@ -38,7 +45,7 @@ export default function ProductListing({
             {!!image && (
                 <div
                     style={{ backgroundImage: `url(${image})` }}
-                    className='mt-8 lg:bg-fixed bg-no-repeat bg-cover bg-center w-full h-[250px] lg:h-[675px] bg-green'
+                    className='mt-8 h-[250px] w-full bg-green bg-cover bg-center bg-no-repeat lg:h-[675px] lg:bg-fixed'
                 />
             )}
         </section>

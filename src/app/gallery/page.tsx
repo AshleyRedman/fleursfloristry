@@ -87,7 +87,9 @@ export default function Gallery() {
         <>
             <section className='my-8 lg:my-16'>
                 <Container>
-                    <h3 className='text-center text-4xl font-serif text-peach-default font-medium'>Gallery</h3>
+                    <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
+                        Gallery
+                    </h3>
                 </Container>
             </section>
             <Masonry images={images} />

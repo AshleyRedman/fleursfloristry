@@ -24,12 +24,15 @@ export default function Contact({}: {}) {
         <>
             <section className='py-12'>
                 <Container className='lg:px-48 2xl:px-96'>
-                    <h3 className='text-center text-4xl font-serif text-peach-default font-medium'>Contact us</h3>
-                    <article className='space-y-6 text-center mt-8 mb-12'>
-                        <p className='w-4/5 mx-auto'>
-                            As no event is the same, please don&apos;t hesitate to contact us with any questions,
-                            comments or special requests that you may have. Please also use this form to in order to
-                            contact us rgerading your bespoke wedding package.
+                    <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
+                        Contact us
+                    </h3>
+                    <article className='mb-12 mt-8 space-y-6 text-center'>
+                        <p className='mx-auto w-4/5'>
+                            As no event is the same, please don&apos;t hesitate to contact us with
+                            any questions, comments or special requests that you may have. Please
+                            also use this form to in order to contact us rgerading your bespoke
+                            wedding package.
                         </p>
                         <p>Asfordby, Melton Mowbray</p>
                         <a href='mailto:enquiries@fleursfloristry.com' className='block underline'>
@@ -41,6 +44,7 @@ export default function Contact({}: {}) {
             </section>
             <section>
                 <iframe
+                    title='Map'
                     src={gmap}
                     height='450'
                     style={{ border: 0 }}

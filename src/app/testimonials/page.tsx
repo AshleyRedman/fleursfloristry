@@ -117,12 +117,12 @@ export default function Testimonials() {
         <>
             <section className='my-8 lg:my-16'>
                 <Container>
-                    <h3 className='text-center text-4xl font-serif text-peach-default font-medium'>
+                    <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
                         Reviews & Comments
                     </h3>
                 </Container>
             </section>
-            <Container className='space-y-8 lg:space-y-12 mb-12'>
+            <Container className='mb-12 space-y-8 lg:space-y-12'>
                 {testimonials.map((t, i) => (
                     <Testimonial key={i} alignment={i % 2 === 0 ? 'right' : 'left'} {...t} />
                 ))}

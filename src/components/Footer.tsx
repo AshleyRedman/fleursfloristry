@@ -6,8 +6,10 @@ import Link from './Link';
 export default function Footer({}: {}) {
     return (
         <footer className='mt-8'>
-            <Container className='pb-6 flex items-center justify-between'>
-                <span className='text-2xl text-peach-default font-serif'>Fleur&apos;s Floristry</span>
+            <Container className='flex items-center justify-between pb-6'>
+                <span className='font-serif text-2xl text-peach-default'>
+                    Fleur&apos;s Floristry
+                </span>
                 <ul className='flex items-center space-x-4'>
                     <li>
                         <Link href='mailto:enquiries@fleursfloristry.com' className='block'>
@@ -29,7 +31,8 @@ export default function Footer({}: {}) {
             <div className='bg-gray py-6'>
                 <Container>
                     <small>
-                        &copy; <span className='text-peach-dark font-medium'>Fleur&apos;s Floristry </span>
+                        &copy;{' '}
+                        <span className='font-medium text-peach-dark'>Fleur&apos;s Floristry </span>
                         {new Date().getFullYear()}
                     </small>
                 </Container>

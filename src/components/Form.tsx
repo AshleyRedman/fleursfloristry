@@ -1,6 +1,6 @@
 import { FormEventHandler, FormHTMLAttributes, PropsWithChildren, forwardRef, useRef } from 'react';
+import { cn } from '../lib/helpers';
 import HoneyPot from './HoneyPot';
-import { twMerge } from 'tailwind-merge';
 
 const Form = forwardRef<
     HTMLFormElement,
@@ -14,7 +14,7 @@ const Form = forwardRef<
     };
 
     return (
-        <form ref={ref} {...rest} onSubmit={submit(onSubmit)} className={twMerge('', className)}>
+        <form ref={ref} {...rest} onSubmit={submit(onSubmit)} className={cn('', className)}>
             <HoneyPot ref={protectionRef} />
             {children}
         </form>

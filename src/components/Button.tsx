@@ -1,11 +1,13 @@
 'use client';
 
 import { ButtonHTMLAttributes, useRef } from 'react';
-import { useButton, AriaButtonProps } from 'react-aria';
-import { twMerge } from 'tailwind-merge';
+import { AriaButtonProps, useButton } from 'react-aria';
+import { cn } from '../lib/helpers';
 import Link from './Link';
 
-export default function Button({ ...rest }: AriaButtonProps & ButtonHTMLAttributes<HTMLButtonElement>) {
+export default function Button({
+    ...rest
+}: AriaButtonProps & ButtonHTMLAttributes<HTMLButtonElement>) {
     let ref = useRef<HTMLButtonElement>(null);
     let { buttonProps } = useButton(rest, ref);
 
@@ -13,8 +15,8 @@ export default function Button({ ...rest }: AriaButtonProps & ButtonHTMLAttribut
         <button
             {...buttonProps}
             ref={ref}
-            className={twMerge(
-                'ring-peach-default outline-none focus-visible:ring focus-visible:rounded',
+            className={cn(
+                'outline-none ring-peach-default focus-visible:rounded focus-visible:ring',
                 rest.className
             )}
         >
@@ -33,8 +35,8 @@ export function StyledButton({
         return (
             <Link
                 href={href}
-                className={twMerge(
-                    'inline-flex px-6 py-2 bg-peach-light text-center text-white rounded-none tracking-wide hover:bg-peach-default transition-colors duration-300 ease-in-out',
+                className={cn(
+                    'inline-flex rounded-none bg-peach-light px-6 py-2 text-center tracking-wide text-white transition-colors duration-300 ease-in-out hover:bg-peach-default',
                     rest.className
                 )}
             >
@@ -46,8 +48,8 @@ export function StyledButton({
     return (
         <Button
             {...rest}
-            className={twMerge(
-                'inline-flex px-6 py-2 bg-peach-light text-center text-white rounded-none tracking-wide hover:bg-peach-default transition-colors duration-300 ease-in-out',
+            className={cn(
+                'inline-flex rounded-none bg-peach-light px-6 py-2 text-center tracking-wide text-white transition-colors duration-300 ease-in-out hover:bg-peach-default',
                 rest.className
             )}
         >

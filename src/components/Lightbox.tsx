@@ -40,15 +40,15 @@ export default function Lightbox({ image }: { image: I }) {
                     filename={image.src}
                     alt={image.alt}
                     width={600}
-                    className='aspect-video object-cover h-[400px] w-full'
+                    className='aspect-video h-[400px] w-full object-cover'
                 />
             </Button>
 
             {open && (
-                <div className='fixed inset-0 flex justify-center items-center z-40 hover:cursor-pointer'>
+                <div className='fixed inset-0 z-40 flex items-center justify-center hover:cursor-pointer'>
                     <Button
                         onPress={() => setOpen(false)}
-                        className='absolute top-4 right-4 z-50 bg-white p-2 !rounded-full'
+                        className='absolute right-4 top-4 z-50 !rounded-full bg-white p-2'
                     >
                         <X size={28} />
                     </Button>
@@ -57,10 +57,10 @@ export default function Lightbox({ image }: { image: I }) {
                             filename={image.src}
                             alt={image.alt}
                             width={1920}
-                            className='border-2 border-black rounded mx-4 w-[calc(100%-32px)] h-[calc(100vh-10px)]'
+                            className='mx-4 h-[calc(100vh-10px)] w-[calc(100%-32px)] rounded border-2 border-black'
                         />
                     </ClickAwayListener>
-                    <div className='absolute inset-0 bg-black/50 -z-10' />
+                    <div className='absolute inset-0 -z-10 bg-black/50' />
                 </div>
             )}
         </>

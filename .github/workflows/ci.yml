@@ -2,17 +2,17 @@ name: CI
 on: [push]
 
 jobs:
-    jobs:
+    ci:
         timeout-minutes: 10
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v3
 
-            - name: Install node 18
+            - name: Install node 20
               uses: actions/setup-node@v3
               with:
-                  node-version: 18
+                  node-version: 20
 
             - uses: pnpm/action-setup@v2
               name: Install pnpm
@@ -24,14 +24,5 @@ jobs:
             - name: Install dependencies
               run: pnpm install
 
-            - name: NCU check
-              run: pnpm packages:check
-
-            - name: Run tsc
-              run: pnpm types
-
-            - name: Run lint
-              run: pnpm lint
-
-            - name: Run prettier check
-              run: pnpm format:check
+            - name: Check
+              run: pnpm check

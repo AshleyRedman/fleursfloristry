@@ -32,7 +32,7 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
         <>
             <Button
                 onPress={() => setOpen(true)}
-                className='block lg:hidden fixed top-2 right-4 z-30 bg-white p-2 rounded-full'
+                className='fixed right-4 top-2 z-30 block rounded-full bg-white p-2 lg:hidden'
             >
                 <Menu size={28} className='stroke-peach-default' />
             </Button>
@@ -44,7 +44,7 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 0.5 }}
                             exit={{ opacity: 0 }}
-                            className='inset-0 fixed bg-black'
+                            className='fixed inset-0 bg-black'
                         />
                         <ClickAwayListner onClickAway={() => setOpen(false)}>
                             <motion.aside
@@ -52,11 +52,11 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
                                 animate={{ x: 0 }}
                                 exit={{ x: '100%' }}
                                 transition={{ duration: 0.25, bounce: 0 }}
-                                className='fixed top-0 right-0 w-2/3 h-full bg-white shadow block lg:hidden z-40 pt-24 px-10'
+                                className='fixed right-0 top-0 z-40 block h-full w-2/3 bg-white px-10 pt-24 shadow lg:hidden'
                             >
                                 <Button
                                     onPress={() => setOpen(false)}
-                                    className='block lg:hidden fixed top-4 right-10 z-40'
+                                    className='fixed right-10 top-4 z-40 block lg:hidden'
                                 >
                                     <AlignRight size={28} className='stroke-peach-default' />
                                 </Button>

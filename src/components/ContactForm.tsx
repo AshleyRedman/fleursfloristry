@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { twMerge } from 'tailwind-merge';
+import { cn } from '../lib/helpers';
 import { Form as TForm, schema } from '../types';
 import { StyledButton } from './Button';
 import Form from './Form';
@@ -20,8 +20,6 @@ export default function ContactForm() {
         try {
             clearErrors();
             setSubmitting(true);
-
-            console.log({ data });
 
             const request = await fetch(`/api/contact`, {
                 headers: { 'Content-Type': 'application/json' },
@@ -53,10 +51,11 @@ export default function ContactForm() {
         <>
             {!sent && (
                 <Form onSubmit={handleSubmit(submit)} className=''>
-                    <p className='font-semibold text-center mb-6'>
-                        We aim to get back to you within 48 hours, please check your spam/junk for our reply.
+                    <p className='mb-6 text-center font-semibold'>
+                        We aim to get back to you within 48 hours, please check your spam/junk for
+                        our reply.
                     </p>
-                    <div className='space-y-8 mb-8'>
+                    <div className='mb-8 space-y-8'>
                         <label htmlFor='name' className='block'>
                             <Title label='Name' required />
                             <input
@@ -65,12 +64,14 @@ export default function ContactForm() {
                                 required
                                 placeholder='Your full name here...'
                                 {...register('name')}
-                                className={twMerge(
+                                className={cn(
                                     'block w-full border-2 outline-none',
                                     formState.errors.name ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
-                            {!!formState.errors.name && <Error message={formState.errors.name.message} />}
+                            {!!formState.errors.name && (
+                                <Error message={formState.errors.name.message} />
+                            )}
                         </label>
 
                         <label htmlFor='email' className='block'>
@@ -80,12 +81,14 @@ export default function ContactForm() {
                                 id='email'
                                 {...register('email')}
                                 placeholder='Your email here...'
-                                className={twMerge(
+                                className={cn(
                                     'block w-full border-2',
                                     formState.errors.email ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
-                            {!!formState.errors.email && <Error message={formState.errors.email.message} />}
+                            {!!formState.errors.email && (
+                                <Error message={formState.errors.email.message} />
+                            )}
                         </label>
 
                         <label htmlFor='phone' className='block'>
@@ -95,12 +98,14 @@ export default function ContactForm() {
                                 id='phone'
                                 {...register('phone')}
                                 placeholder='Your number here...'
-                                className={twMerge(
+                                className={cn(
                                     'block w-full border-2',
                                     formState.errors.phone ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
-                            {!!formState.errors.phone && <Error message={formState.errors.phone.message} />}
+                            {!!formState.errors.phone && (
+                                <Error message={formState.errors.phone.message} />
+                            )}
                         </label>
 
                         <label htmlFor='address' className='block'>
@@ -110,12 +115,14 @@ export default function ContactForm() {
                                 id='address'
                                 {...register('address')}
                                 placeholder='Your events full address'
-                                className={twMerge(
+                                className={cn(
                                     'block w-full border-2',
                                     formState.errors.address ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
-                            {!!formState.errors.address && <Error message={formState.errors.address.message} />}
+                            {!!formState.errors.address && (
+                                <Error message={formState.errors.address.message} />
+                            )}
                         </label>
 
                         <label htmlFor='date' className='block'>
@@ -124,12 +131,14 @@ export default function ContactForm() {
                                 type='date'
                                 id='date'
                                 {...register('date')}
-                                className={twMerge(
+                                className={cn(
                                     'block w-full border-2',
                                     formState.errors.date ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
-                            {!!formState.errors.date && <Error message={formState.errors.date.message} />}
+                            {!!formState.errors.date && (
+                                <Error message={formState.errors.date.message} />
+                            )}
                         </label>
 
                         <label htmlFor='message' className='block'>
@@ -139,20 +148,26 @@ export default function ContactForm() {
                                 rows={8}
                                 {...register('message')}
                                 placeholder='Additional information...'
-                                className={twMerge(
+                                className={cn(
                                     'block w-full border-2',
                                     formState.errors.message ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
-                            {!!formState.errors.message && <Error message={formState.errors.message.message} />}
+                            {!!formState.errors.message && (
+                                <Error message={formState.errors.message.message} />
+                            )}
                         </label>
                     </div>
                     {!!formState.errors.root && (
-                        <span className='block text-center text-peach-dark font-medium'>
+                        <span className='block text-center font-medium text-peach-dark'>
                             {formState.errors.root.message}
                         </span>
                     )}
-                    <StyledButton type='submit' className='bg-black text-white flex ml-auto mr-0' disabled={submitting}>
+                    <StyledButton
+                        type='submit'
+                        className='ml-auto mr-0 flex bg-black text-white'
+                        disabled={submitting}
+                    >
                         {submitting ? 'Sending...' : 'Send'}
                     </StyledButton>
                 </Form>
@@ -161,7 +176,8 @@ export default function ContactForm() {
             {sent && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                     <p className='text-center font-semibold'>
-                        Thank you for submitting your enquiry, dont forget to check your spam/junk for our reply!
+                        Thank you for submitting your enquiry, dont forget to check your spam/junk
+                        for our reply!
                     </p>
                 </motion.div>
             )}
@@ -172,11 +188,11 @@ export default function ContactForm() {
 function Title({ label, required }: { label: string; required?: boolean }) {
     return (
         <span className='mb-2 block'>
-            {label} {required && <span className='text-peach-default text-xl'>*</span>}
+            {label} {required && <span className='text-xl text-peach-default'>*</span>}
         </span>
     );
 }
 
 function Error({ message }: { message?: string }) {
-    return <span className='block my-2 text-peach-dark font-semibold text-right'>{message}</span>;
+    return <span className='my-2 block text-right font-semibold text-peach-dark'>{message}</span>;
 }

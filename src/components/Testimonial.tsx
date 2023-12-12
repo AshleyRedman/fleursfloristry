@@ -1,9 +1,9 @@
-import { twMerge } from 'tailwind-merge';
 import Image from './Image';
 import { Testimonial } from '../types';
 import { Quote } from 'lucide-react';
 import { HTMLAttributes } from 'react';
 import Link from './Link';
+import { cn } from '../lib/helpers';
 
 export default function Testimonial({
     alignment,
@@ -14,7 +14,7 @@ export default function Testimonial({
 }: Testimonial & { alignment: 'left' | 'right' }) {
     return (
         <section
-            className={twMerge(
+            className={cn(
                 'grid gap-6 xl:gap-12',
                 alignment && 'grid-cols-1 xl:grid-cols-2',
                 alignment === 'left' ? '' : ''
@@ -27,7 +27,7 @@ export default function Testimonial({
                         filename={image.src}
                         alt={image.alt}
                         width={800}
-                        className='h-full object-cover aspect-auto w-full'
+                        className='aspect-auto h-full w-full object-cover'
                     />
                 </>
             )}
@@ -38,7 +38,7 @@ export default function Testimonial({
                         filename={image.src}
                         alt={image.alt}
                         width={800}
-                        className='h-full object-cover aspect-auto w-full'
+                        className='aspect-auto h-full w-full object-cover'
                     />
                     <Entry author={author} body={body} link={link} />
                 </>
@@ -56,14 +56,17 @@ function Entry({
     ...rest
 }: Pick<Testimonial, 'author' | 'body' | 'link'> & HTMLAttributes<HTMLDivElement>) {
     return (
-        <article {...rest} className={twMerge('bg-gray p-8 space-y-6', rest.className)}>
+        <article {...rest} className={cn('space-y-6 bg-gray p-8', rest.className)}>
             <Quote size={24} />
-            <blockquote className='leading-loose italic'>
+            <blockquote className='italic leading-loose'>
                 <p className='px-4'>{body}</p>
             </blockquote>
-            <span className='pl-4 block'>
+            <span className='block pl-4'>
                 {!!link ? (
-                    <Link href={link} className='underline decoration-peach-light decoration-2 underline-offset-2'>
+                    <Link
+                        href={link}
+                        className='underline decoration-peach-light decoration-2 underline-offset-2'
+                    >
                         {author}
                     </Link>
                 ) : (

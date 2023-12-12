@@ -1,13 +1,13 @@
 import NextLink, { LinkProps } from 'next/link';
 import { HTMLAttributes } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { cn } from '../lib/helpers';
 
 export default function Link({ children, ...rest }: LinkProps & HTMLAttributes<HTMLAnchorElement>) {
     return (
         <NextLink
             {...rest}
-            className={twMerge(
-                'ring-peach-default outline-none focus-visible:ring focus-visible:rounded',
+            className={cn(
+                'outline-none ring-peach-default focus-visible:rounded focus-visible:ring',
                 rest.className
             )}
         >

@@ -49,20 +49,22 @@ export default function FAQ() {
         <>
             <section className='my-12'>
                 <Container>
-                    <h3 className='text-center text-4xl font-serif text-peach-default font-medium'>
+                    <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
                         Why Artificial Flowers
                     </h3>
-                    <h4 className='text-xl text-center font-light my-4 leading-relaxed text-green italic'>
+                    <h4 className='my-4 text-center text-xl font-light italic leading-relaxed text-green'>
                         A few little things that you may not have considered
                     </h4>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 mt-8'>
+                    <div className='mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0'>
                         {faqs.map((f) => (
                             <article
                                 key={f.title}
                                 className='space-y-4 lg:p-8 2xl:p-16
                             '
                             >
-                                <h5 className='text-peach-default font-serif text-2xl'>{f.title}</h5>
+                                <h5 className='font-serif text-2xl text-peach-default'>
+                                    {f.title}
+                                </h5>
                                 <p className='leading-loose'>{f.body}</p>
                             </article>
                         ))}

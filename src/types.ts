@@ -7,7 +7,12 @@ export type PageProps<T> = {
 
 export type NavItem = { label: string; href: string };
 
-export type Testimonial = { body: string; author: string; image?: { src: string; alt: string }; link?: string };
+export type Testimonial = {
+    body: string;
+    author: string;
+    image?: { src: string; alt: string };
+    link?: string;
+};
 
 export type Image = { src: string; alt: string };
 
@@ -23,3 +28,5 @@ export const schema = z
     .strict();
 
 export type Form = z.infer<typeof schema>;
+
+export type Stage = 'production' | 'preview' | 'development' | 'local';
