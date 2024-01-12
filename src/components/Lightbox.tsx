@@ -32,13 +32,7 @@ export default function Lightbox({
     return (
         <div {...rest}>
             <Button onPress={() => setOpen(true)} className='mx-auto block w-full'>
-                <Image
-                    filename={image.src}
-                    alt={image.alt}
-                    width={500}
-                    className='w-full'
-                    onLoad={(e) => console.log('??')}
-                />
+                <Image filename={image.src} alt={image.alt} width={500} className='w-full' />
             </Button>
 
             <AnimatePresence>
