@@ -1,3 +1,5 @@
+'use client';
+
 import { cloudinary } from '@/src/lib/cdn';
 import { HTMLAttributes } from 'react';
 import { cn } from '../lib/helpers';
@@ -13,7 +15,7 @@ export default function Image({
     alt: string;
     width: number;
     loading?: 'eager' | 'lazy';
-} & HTMLAttributes<HTMLImageElement>) {
+} & HTMLAttributes<HTMLPictureElement>) {
     return (
         <picture>
             <source
@@ -28,7 +30,7 @@ export default function Image({
                 {...rest}
                 src={cloudinary(filename, 'fleursfloristry', 'png', width)}
                 width={width}
-                alt={alt}
+                aria-label={alt}
                 className={cn('', rest.className)}
                 loading={loading}
             />

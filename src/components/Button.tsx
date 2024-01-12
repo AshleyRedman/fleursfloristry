@@ -12,14 +12,7 @@ export default function Button({
     let { buttonProps } = useButton(rest, ref);
 
     return (
-        <button
-            {...buttonProps}
-            ref={ref}
-            className={cn(
-                'outline-none ring-peach-default focus-visible:rounded focus-visible:ring',
-                rest.className
-            )}
-        >
+        <button {...buttonProps} ref={ref} className={cn('outline-none', rest.className)}>
             {rest.children}
         </button>
     );

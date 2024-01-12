@@ -30,9 +30,8 @@ export default function Footer({}: {}) {
             </Container>
             <div className='bg-gray py-6'>
                 <Container>
-                    <small>
-                        &copy;{' '}
-                        <span className='font-medium text-peach-dark'>Fleur&apos;s Floristry </span>
+                    <small className='font-medium text-peach-dark'>
+                        &copy; <span>Fleur&apos;s Floristry </span>
                         {new Date().getFullYear()}
                     </small>
                 </Container>

@@ -20,7 +20,7 @@ export default function AboutUs({}: {}) {
         <>
             <Callout
                 className='space-y-8 lg:space-y-10'
-                image={{ filename: 'emily_vfqxuf', alt: 'bouquets', width: 1280, minHeight: 400 }}
+                image={{ filename: 'emily_vfqxuf', alt: 'bouquets', width: 1280, minHeight: 500 }}
             >
                 <h3 className='text-center font-serif text-4xl font-light leading-none'>
                     Our Beginnings
