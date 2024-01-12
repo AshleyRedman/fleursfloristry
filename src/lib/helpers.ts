@@ -8,7 +8,7 @@ export const cn = (...args: Array<string | undefined | false>): string => {
 export const canonical = (stage: Stage): string => {
     switch (stage) {
         case 'production':
-            return 'https://fleursfloristry.com';
+            return 'https://www.fleursfloristry.com';
 
         case 'development':
         case 'preview':

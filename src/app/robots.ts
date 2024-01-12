@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/'
             // disallow: '/private/'
         },
-        sitemap: 'https://fleursfloristry.com/sitemap.xml'
+        sitemap: 'https://www.fleursfloristry.com/sitemap.xml'
     };
 }

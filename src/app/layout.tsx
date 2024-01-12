@@ -18,7 +18,7 @@ const raleway = Raleway({
 export const metadata = {
     title: "Fleur's Floristry | Luxury Florals That Last A Lifetime",
     description: 'Luxury Florals That Last A Lifetime',
-    metadataBase: new URL('https://fleursfloristry.com'),
+    metadataBase: new URL('https://www.fleursfloristry.com'),
     alternates: {
         canonical: '/'
     },

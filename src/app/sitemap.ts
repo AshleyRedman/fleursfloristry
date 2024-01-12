@@ -3,43 +3,43 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://fleursfloristry.com',
+            url: 'https://www.fleursfloristry.com',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 1
         },
         {
-            url: 'https://fleursfloristry.com/about-us',
+            url: 'https://www.fleursfloristry.com/about-us',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8
         },
         {
-            url: 'https://fleursfloristry.com/prices',
+            url: 'https://www.fleursfloristry.com/prices',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8
         },
         {
-            url: 'https://fleursfloristry.com/testimonials',
+            url: 'https://www.fleursfloristry.com/testimonials',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8
         },
         {
-            url: 'https://fleursfloristry.com/faq',
+            url: 'https://www.fleursfloristry.com/faq',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8
         },
         {
-            url: 'https://fleursfloristry.com/gallery',
+            url: 'https://www.fleursfloristry.com/gallery',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.8
         },
         {
-            url: 'https://fleursfloristry.com/contact',
+            url: 'https://www.fleursfloristry.com/contact',
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.9
