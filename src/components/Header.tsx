@@ -20,7 +20,7 @@ export default function Header({ items }: { items: NavItem[] }) {
                         filename='logo_vsyxwk'
                         width={140}
                         loading='eager'
-                        className='h-[70px] w-[70px] lg:h-[153px] lg:w-[140px]'
+                        className='size-[70px] lg:h-[153px] lg:w-[140px]'
                     />
                 </Link>
                 <h3 className='mx-auto block w-fit text-center font-serif text-lg text-green lg:text-xl'>

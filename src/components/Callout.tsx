@@ -27,7 +27,7 @@ export default function Callout({
                     filename={image.filename}
                     width={image.width}
                     alt={image.alt}
-                    className='absolute inset-0 h-full w-full object-cover'
+                    className='absolute inset-0 size-full object-cover'
                 />
             </div>
         </section>

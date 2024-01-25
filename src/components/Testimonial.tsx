@@ -27,7 +27,7 @@ export default function Testimonial({
                         filename={image.src}
                         alt={image.alt}
                         width={800}
-                        className='aspect-auto h-full w-full object-cover'
+                        className='aspect-auto size-full object-cover'
                     />
                 </>
             )}
@@ -38,7 +38,7 @@ export default function Testimonial({
                         filename={image.src}
                         alt={image.alt}
                         width={800}
-                        className='aspect-auto h-full w-full object-cover'
+                        className='aspect-auto size-full object-cover'
                     />
                     <Entry author={author} body={body} link={link} />
                 </>
