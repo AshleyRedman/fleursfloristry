@@ -1,5 +1,5 @@
 import Image from './Image';
-import { Testimonial } from '../types';
+import { TestimonialType } from '../types';
 import { Quote } from 'lucide-react';
 import { HTMLAttributes } from 'react';
 import Link from './Link';
@@ -11,7 +11,7 @@ export default function Testimonial({
     author,
     body,
     link
-}: Testimonial & { alignment: 'left' | 'right' }) {
+}: TestimonialType & { alignment: 'left' | 'right' }) {
     return (
         <section
             className={cn(
@@ -54,7 +54,7 @@ function Entry({
     body,
     link,
     ...rest
-}: Pick<Testimonial, 'author' | 'body' | 'link'> & HTMLAttributes<HTMLDivElement>) {
+}: Pick<TestimonialType, 'author' | 'body' | 'link'> & HTMLAttributes<HTMLDivElement>) {
     return (
         <article {...rest} className={cn('space-y-6 bg-gray p-8', rest.className)}>
             <Quote size={24} />

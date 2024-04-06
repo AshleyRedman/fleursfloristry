@@ -7,7 +7,7 @@ export type PageProps<T> = {
 
 export type NavItem = { label: string; href: string };
 
-export type Testimonial = {
+export type TestimonialType = {
     body: string;
     author: string;
     image?: { src: string; alt: string };

@@ -1,5 +1,5 @@
 import { Metadata, ResolvingMetadata } from 'next';
-import type { PageProps, Testimonial as T } from '../../types';
+import type { PageProps, TestimonialType as T } from '../../types';
 import Container from '../../components/Container';
 import Testimonial from '../../components/Testimonial';
 
