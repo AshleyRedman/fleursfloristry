@@ -9,26 +9,22 @@ export default function Image({
     alt,
     width,
     loading = 'lazy',
+    path = 'fleursfloristry',
     ...rest
 }: {
     filename: string;
     alt: string;
     width: number;
+    path?: string;
     loading?: 'eager' | 'lazy';
 } & HTMLAttributes<HTMLPictureElement>) {
     return (
         <picture>
-            <source
-                srcSet={cloudinary(filename, 'fleursfloristry', 'webp', width)}
-                type='image/webp'
-            />
-            <source
-                srcSet={cloudinary(filename, 'fleursfloristry', 'png', width)}
-                type='image/png'
-            />
+            <source srcSet={cloudinary(filename, path, 'webp', width)} type='image/webp' />
+            <source srcSet={cloudinary(filename, path, 'png', width)} type='image/png' />
             <img
                 {...rest}
-                src={cloudinary(filename, 'fleursfloristry', 'png', width)}
+                src={cloudinary(filename, path, 'png', width)}
                 width={width}
                 aria-label={alt}
                 className={cn('', rest.className)}

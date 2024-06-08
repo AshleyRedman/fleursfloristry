@@ -57,11 +57,7 @@ export default function FAQ() {
                     </h4>
                     <div className='mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0'>
                         {faqs.map((f) => (
-                            <article
-                                key={f.title}
-                                className='space-y-4 lg:p-8 2xl:p-16
-                            '
-                            >
+                            <article key={f.title} className='space-y-4 lg:p-8 2xl:p-16'>
                                 <h5 className='font-serif text-2xl text-peach-default'>
                                     {f.title}
                                 </h5>

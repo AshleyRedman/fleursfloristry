@@ -1,6 +1,9 @@
 import { PageProps } from '@/src/types';
 import Callout from '../../components/Callout';
 import { Metadata, ResolvingMetadata } from 'next';
+import { cloudinary } from '@/src/lib/cdn';
+import Image from '@/src/components/Image';
+import Container from '@/src/components/Container';
 
 export const generateMetadata = async (
     _: PageProps<{ slug: string }>,
@@ -49,6 +52,22 @@ export default function AboutUs({}: {}) {
                     </div>
                 </article>
             </Callout>
+            <Container className='grid px-0 md:grid-cols-2'>
+                <Image
+                    filename='winner_image_nkzsu5'
+                    path='fleursfloristry/about'
+                    width={1200}
+                    className='h-full w-full object-cover'
+                    alt='about1'
+                />
+                <Image
+                    filename='Photo_17-03-2024_13_06_02-min_jiuzba'
+                    path='fleursfloristry/about'
+                    width={1200}
+                    className='h-full w-full object-cover'
+                    alt='about2'
+                />
+            </Container>
         </>
     );
 }

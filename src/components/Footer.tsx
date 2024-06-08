@@ -1,15 +1,28 @@
-import Container from './Container';
-
 import { Facebook, Instagram, Mail } from 'lucide-react';
+
+import { cloudinary } from '../lib/cdn';
+import Container from './Container';
 import Link from './Link';
 
 export default function Footer({}: {}) {
     return (
         <footer className='mt-8'>
             <Container className='flex items-center justify-between pb-6'>
-                <span className='font-serif text-2xl text-peach-default'>
-                    Fleur&apos;s Floristry
-                </span>
+                <div className='items-center space-y-8 md:flex md:space-x-10 md:space-y-0'>
+                    <span className='font-serif text-2xl text-peach-default'>
+                        Fleur&apos;s Floristry
+                    </span>
+                    <div className='flex items-center space-x-5'>
+                        <img
+                            src={cloudinary('winners_vs2bhc', 'fleursfloristry/logos', 'jpg', 100)}
+                            width={100}
+                        />
+                        <img
+                            src={cloudinary('finalist_fkmsfa', 'fleursfloristry/logos', 'jpg', 100)}
+                            width={100}
+                        />
+                    </div>
+                </div>
                 <ul className='flex items-center space-x-4'>
                     <li>
                         <Link href='mailto:enquiries@fleursfloristry.com' className='block'>

@@ -5,6 +5,6 @@ const path = 'v1687032250';
 export const cloudinary = (
     name: string,
     dir: string,
-    format: 'webp' | 'png',
+    format: 'webp' | 'png' | 'jpg',
     width: number
 ): string => `${cdn}/${scale}w_${width}/${path}/${dir}/${name}.${format}`;
