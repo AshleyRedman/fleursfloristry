@@ -50,7 +50,7 @@ export default function ContactForm() {
     return (
         <>
             {!sent && (
-                <Form onSubmit={handleSubmit(submit)} className=''>
+                <Form onSubmit={handleSubmit(submit)}>
                     <p className='mb-6 text-center font-semibold'>
                         We aim to get back to you within 48 hours, please check your spam/junk for
                         our reply.
@@ -71,6 +71,24 @@ export default function ContactForm() {
                             />
                             {!!formState.errors.name && (
                                 <Error message={formState.errors.name.message} />
+                            )}
+                        </label>
+
+                        <label htmlFor='partner' className='block'>
+                            <Title label='Partners name' required />
+                            <input
+                                type='text'
+                                id='partner'
+                                required
+                                placeholder='Your partners full name here...'
+                                {...register('partner')}
+                                className={cn(
+                                    'block w-full border-2 outline-none',
+                                    formState.errors.name ? 'border-peach-dark' : 'border-gray'
+                                )}
+                            />
+                            {!!formState.errors.partner && (
+                                <Error message={formState.errors.partner.message} />
                             )}
                         </label>
 

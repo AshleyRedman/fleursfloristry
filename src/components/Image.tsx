@@ -3,6 +3,7 @@
 import { cloudinary } from '@/src/lib/cdn';
 import { HTMLAttributes } from 'react';
 import { cn } from '../lib/helpers';
+import { CDNImage } from '@/src/types';
 
 export default function Image({
     filename,
@@ -11,13 +12,7 @@ export default function Image({
     loading = 'lazy',
     path = 'fleursfloristry',
     ...rest
-}: {
-    filename: string;
-    alt: string;
-    width: number;
-    path?: string;
-    loading?: 'eager' | 'lazy';
-} & HTMLAttributes<HTMLPictureElement>) {
+}: CDNImage & HTMLAttributes<HTMLPictureElement>) {
     return (
         <picture>
             <source srcSet={cloudinary(filename, path, 'webp', width)} type='image/webp' />

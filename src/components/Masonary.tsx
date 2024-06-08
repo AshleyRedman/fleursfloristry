@@ -3,7 +3,7 @@
 import { Image } from '../types';
 import RMasonry from 'react-masonry-css';
 
-import Lightbox from './Lightbox';
+import Lightbox from './Lightbox_old';
 
 const breakpointColumnsObj = {
     default: 4,

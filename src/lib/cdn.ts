@@ -6,5 +6,5 @@ export const cloudinary = (
     name: string,
     dir: string,
     format: 'webp' | 'png' | 'jpg',
-    width: number
-): string => `${cdn}/${scale}w_${width}/${path}/${dir}/${name}.${format}`;
+    width?: number
+): string => `${cdn}/${scale}w_${width ?? 600}/${path}/${dir}/${name}.${format}`;

@@ -1,6 +1,6 @@
-import Container from '../../components/Container';
-import Masonry from '../../components/Masonary';
-import { Image, PageProps } from '../../types';
+import Container from '@/src/components/Container';
+import { Archive } from '@/src/components/Gallery/Archive';
+import { GalleryEntry, Image, PageProps } from '@/src/types';
 import { Metadata, ResolvingMetadata } from 'next';
 
 const images: Image[] = [
@@ -69,6 +69,93 @@ const images: Image[] = [
     { src: 'gallery/63_grzhtk', alt: '63' }
 ];
 
+const GalleryEntries: GalleryEntry[] = [
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: [
+            { alt: 'lol', filename: '1_yvruta', path: 'fleursfloristry/gallery', width: 1920 },
+            { alt: 'lol', filename: '1_yvruta', path: 'fleursfloristry/gallery' },
+            { alt: 'lol', filename: '1_yvruta', path: 'fleursfloristry/gallery' }
+        ]
+    },
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: []
+    },
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: []
+    },
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: [{ alt: 'lol', filename: '1_yvruta', path: 'fleursfloristry/gallery' }]
+    },
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: []
+    },
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: []
+    },
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: []
+    },
+    {
+        heading: 'lol',
+        subHeading: 'lol2',
+        cover: {
+            alt: 'lol',
+            filename: '1_yvruta',
+            path: 'fleursfloristry/gallery'
+        },
+        items: []
+    }
+];
+
 export const generateMetadata = async (
     _: PageProps<{ slug: string }>,
     parent: ResolvingMetadata
@@ -92,7 +179,8 @@ export default function Gallery() {
                     </h3>
                 </Container>
             </section>
-            <Masonry images={images} />
+            <Archive entries={GalleryEntries} />
+            {/* <Masonry images={images} /> */}
         </>
     );
 }
