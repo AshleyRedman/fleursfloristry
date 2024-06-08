@@ -1,10 +1,24 @@
 import Container from '@/src/components/Container';
 import { Archive } from '@/src/components/Gallery/Archive';
-import { Fran_Adam, Leah_Bill, Polly_Thomas } from '@/src/content/gallery';
+import {
+    Ashleigh_Tom,
+    Fran_Adam,
+    Leah_Bill,
+    October_Wedding,
+    Polly_Thomas,
+    Tony_Shari
+} from '@/src/content/gallery';
 import { GalleryEntry, PageProps } from '@/src/types';
 import { Metadata, ResolvingMetadata } from 'next';
 
-const GalleryEntries: GalleryEntry[] = [Leah_Bill, Fran_Adam, Polly_Thomas];
+const GalleryEntries: GalleryEntry[] = [
+    Leah_Bill,
+    Fran_Adam,
+    Polly_Thomas,
+    Tony_Shari,
+    October_Wedding,
+    Ashleigh_Tom
+];
 
 export const generateMetadata = async (
     _: PageProps<{ slug: string }>,
