@@ -23,9 +23,9 @@ export default function Header({ items }: { items: NavItem[] }) {
                         className='size-[70px] lg:h-[153px] lg:w-[140px]'
                     />
                 </Link>
-                <h3 className='mx-auto block w-fit text-center font-serif text-lg text-green lg:text-xl'>
+                <h2 className='mx-auto block w-fit text-center font-serif text-lg text-green lg:text-xl'>
                     Luxury Florals That Last A Lifetime
-                </h3>
+                </h2>
                 <nav className='hidden lg:block'>
                     <ul className='mx-auto flex w-fit items-center space-x-4'>
                         {items.map((n) => (

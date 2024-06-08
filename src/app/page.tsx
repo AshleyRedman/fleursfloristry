@@ -16,8 +16,8 @@ export default function Home() {
             <section className='mb-6 lg:mb-16'>
                 <Container>
                     <div className='px-0 py-8 text-center lg:px-48'>
-                        <h3 className='mb-4 font-serif text-4xl text-peach-light lg:text-7xl lg:leading-normal'>
-                            Create your dream wedding today
+                        <h3 className='mb-4 mt-2 font-serif text-4xl tracking-tighter text-peach-light md:mt-8 lg:text-5xl lg:leading-tight'>
+                            Pop me a message to start designing your dream wedding florals today
                         </h3>
                         <h4 className='my-8 text-xl font-light italic leading-relaxed text-green'>
                             From bouquets to banquets, we can provide florals for all occasions no
