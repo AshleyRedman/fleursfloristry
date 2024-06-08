@@ -23,6 +23,7 @@ export default function Prices({}: {}) {
                 title='Wedding Florals'
                 subheading='From Bridal Bouquets To Groomsman Buttonholes & All Things In Between.'
                 image={cloudinary('WeddingFlorals_vgtbur', 'fleursfloristry', 'png', 1920)}
+                bgImage={cloudinary('Natalie_Dickinson_y7mspr', 'fleursfloristry', 'webp', 1920)}
                 entires={[
                     { label: 'Bridal Bouquet', price: 85 },
                     { label: 'Bridesmaid Bouquets', price: 35 },
@@ -39,6 +40,7 @@ export default function Prices({}: {}) {
                 title='Venue decor'
                 subheading='From Moon Gate Arches To Cake Poses And Every Room In Between'
                 image={cloudinary('Venuedecor_e3ojxh', 'fleursfloristry', 'png', 1920)}
+                bgImage={cloudinary('banner_bnuaw0', 'fleursfloristry', 'png', 1920)}
                 entires={[
                     { label: 'Cake decor', price: 12 },
                     { label: 'Moon gate swag', price: 55 },

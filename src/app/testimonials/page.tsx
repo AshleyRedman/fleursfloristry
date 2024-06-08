@@ -5,6 +5,27 @@ import Testimonial from '../../components/Testimonial';
 
 const testimonials: T[] = [
     {
+        body: "I literally hit the jackpot when I found Fleur's Floristry! Such a talented lady! My wedding flowers were stunning, she made everything just like I wanted or even better. Outstanding work Emily! Thank you x",
+        author: 'Karolina Foster',
+        image: {
+            src: '367730315_2681570828647482_176306237273816113_n_vmiglq',
+            alt: 'Karolina Foster'
+        }
+    },
+    {
+        body: 'I would not hesitate to recommend Fleurs Floristry to anyone! The service was incredible from start to finish and the final product was absolutely beautiful. Thank you so much for all your hard work Emily!💜',
+        author: 'Georgia Armstrong',
+        image: { src: 'MAC-960-min_ddkwja', alt: 'Georgia Armstrong' }
+    },
+    {
+        body: "Emily's thoughtfulness and attention to detail made the experience of getting our wedding flowers so unbelievably easy and stress free. We spoke about what kind of colours I liked and showed her some reference pictures and she created some absolutely beautiful arrangements that were even better than what I'd pictured. We received so many compliments on our wedding flowers and I have been recommending her to everyone! Nothing was too much trouble and she has been a pleasure to work with - it is obvious she loves her work and truly cares that you are completely happy with every detail. I am so happy to be able to keep my flowers as a beautiful reminder of our special day, thank you so much Emily!",
+        author: 'Sasha Louise Sisu',
+        image: {
+            src: '444501870_10160558479899232_2346674185107831268_n_ubdt4e',
+            alt: 'Sasha Louise Sisu'
+        }
+    },
+    {
         body: 'Thank you so much for doing our wedding flowers and Button holes they were absolutely beautiful  Great service throughout, when I needed to add on extras at the last minute as I forgot you were brilliant so helpful we cant thank you enough emily with my nan passing suddenly she wanted me to find some one passionate and local to do my flowers for me my nan would be so so proud of the flowers you did for us she would be blown away I  Would definitely recommend you to anyone looking for a lovely flowers and a friendly service you were amazing we cant thank you enough xxx',
         author: 'Melissa Tobias',
         image: { src: 'Melissa_Tobias_p9u1db', alt: 'Melissa Tobias' },

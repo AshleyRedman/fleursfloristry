@@ -1,10 +1,12 @@
-import Footer from '@/src/components/Footer';
-import Header from '@/src/components/Header';
-import MobileMenu from '@/src/components/MobileMenu';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Raleway } from 'next/font/google';
+import 'yet-another-react-lightbox/styles.css';
 import '../globals.css';
+
+import Footer from '@/src/components/Footer';
+import Header from '@/src/components/Header';
+import MobileMenu from '@/src/components/MobileMenu';
 import { canonical, cn } from '../lib/helpers';
 import { NavItem, Stage } from '../types';
 

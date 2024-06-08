@@ -23,9 +23,9 @@ export default function Header({ items }: { items: NavItem[] }) {
                         className='size-[70px] lg:h-[153px] lg:w-[140px]'
                     />
                 </Link>
-                <h3 className='mx-auto block w-fit text-center font-serif text-lg text-green lg:text-xl'>
+                <h2 className='mx-auto block w-fit text-center font-serif text-lg text-green lg:text-xl'>
                     Luxury Florals That Last A Lifetime
-                </h3>
+                </h2>
                 <nav className='hidden lg:block'>
                     <ul className='mx-auto flex w-fit items-center space-x-4'>
                         {items.map((n) => (
@@ -43,8 +43,8 @@ function Item({ label, href }: NavItem) {
     return (
         <li
             className={cn(
-                'border-y-2 border-black/30 text-center font-serif text-base font-medium italic text-black/60 transition-all duration-300 ease-in-out hover:border-black hover:text-black 2xl:min-w-[80px] 2xl:text-lg',
-                pathname === href && 'border-black text-black'
+                'border-y-2 border-green/30 text-center font-serif text-base font-medium italic text-black/60 transition-all duration-300 ease-in-out hover:border-green hover:text-black 2xl:min-w-[80px] 2xl:text-lg',
+                pathname === href && 'border-green/80 text-black'
             )}
         >
             <Link href={href} className='block px-1 py-3 2xl:px-6'>

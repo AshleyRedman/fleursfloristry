@@ -5,10 +5,11 @@ import { env } from '@/src/lib/env';
 export async function POST(request: Request, _: Response) {
     try {
         const to = env.MAIL_TO;
-        const { name, email, phone, address, date, message }: Form = await request.json();
+        const { name, partner, email, phone, address, date, message }: Form = await request.json();
         const subject = `Contact form submission from ${email}`;
 
         const nameRow = `<tr><td>Name: </td><td>${name}</td></tr>`;
+        const partnerRow = `<tr><td>Name: </td><td>${partner}</td></tr>`;
         const emailRow = `<tr><td>Email: </td><td>${email}</td></tr>`;
         const phoneRow = `<tr><td>Phone: </td><td>${phone}</td></tr>`;
         const addressRow = address ? `<tr><td>Address: </td><td>${address}</td></tr>` : '';
@@ -20,7 +21,7 @@ export async function POST(request: Request, _: Response) {
             subject
         });
 
-        const text = `Name: ${name}, Email: ${email}, Phone: ${phone}, Address: ${address}, Event date: ${date}, Message: ${message}`;
+        const text = `Name: ${name}, Partner: ${partner}, Email: ${email}, Phone: ${phone}, Address: ${address}, Event date: ${date}, Message: ${message}`;
         const mailerResponse: { success: boolean; request: { accepted: string[] } } = await send({
             html,
             text,

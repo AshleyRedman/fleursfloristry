@@ -16,9 +16,26 @@ export type TestimonialType = {
 
 export type Image = { src: string; alt: string };
 
+export type GalleryEntry = {
+    heading: string;
+    subHeading: string;
+    meta?: string;
+    cover: CDNImage;
+    items: CDNImage[];
+};
+
+export type CDNImage = {
+    filename: string;
+    alt: string;
+    width?: number;
+    path?: string;
+    loading?: 'eager' | 'lazy';
+};
+
 export const schema = z
     .object({
         name: z.string().min(1, 'Name must be at least one character.'),
+        partner: z.string().min(1, 'Name must be at least one character.'),
         email: z.string().email().min(1, { message: 'Please provide a valid email address.' }),
         phone: z.string().min(1, { message: 'Please provide a valid phone number.' }),
         address: z.string().optional(),

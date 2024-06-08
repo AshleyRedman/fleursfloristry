@@ -1,6 +1,7 @@
 import { PageProps } from '@/src/types';
 import Container from '../../components/Container';
 import { Metadata, ResolvingMetadata } from 'next';
+import { cloudinary } from '@/src/lib/cdn';
 
 type FAQ = { title: string; body: string };
 
@@ -47,8 +48,14 @@ export const generateMetadata = async (
 export default function FAQ() {
     return (
         <>
-            <section className='my-12'>
-                <Container>
+            <section className='relative bg-white py-12'>
+                <div
+                    style={{
+                        backgroundImage: `url(${cloudinary('IMG_7486_q2gafs', 'fleursfloristry/gallery/Ashleigh_Tom', 'jpg', 1920)})`
+                    }}
+                    className='absolute inset-0 bg-cover bg-bottom bg-no-repeat opacity-20'
+                />
+                <Container className=''>
                     <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
                         Why Artificial Flowers
                     </h3>
@@ -57,11 +64,7 @@ export default function FAQ() {
                     </h4>
                     <div className='mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0'>
                         {faqs.map((f) => (
-                            <article
-                                key={f.title}
-                                className='space-y-4 lg:p-8 2xl:p-16
-                            '
-                            >
+                            <article key={f.title} className='space-y-4 lg:p-8 2xl:p-16'>
                                 <h5 className='font-serif text-2xl text-peach-default'>
                                     {f.title}
                                 </h5>

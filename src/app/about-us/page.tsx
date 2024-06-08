@@ -1,6 +1,9 @@
 import { PageProps } from '@/src/types';
 import Callout from '../../components/Callout';
 import { Metadata, ResolvingMetadata } from 'next';
+import { cloudinary } from '@/src/lib/cdn';
+import Image from '@/src/components/Image';
+import Container from '@/src/components/Container';
 
 export const generateMetadata = async (
     _: PageProps<{ slug: string }>,
@@ -20,7 +23,13 @@ export default function AboutUs({}: {}) {
         <>
             <Callout
                 className='space-y-8 lg:space-y-10'
-                image={{ filename: 'emily_vfqxuf', alt: 'bouquets', width: 1280, minHeight: 500 }}
+                image={{
+                    filename: 'winner_image_nkzsu5',
+                    path: 'fleursfloristry/about',
+                    alt: 'bouquets',
+                    width: 1280,
+                    minHeight: 500
+                }}
             >
                 <h3 className='text-center font-serif text-4xl font-light leading-none'>
                     Our Beginnings
@@ -40,6 +49,13 @@ export default function AboutUs({}: {}) {
                         strives to provide luxurious arrangements for all whatever the event.
                     </p>
                     <div>
+                        <p className='font-semibold'>Award Winning Florist</p>
+                        <ul className='italic'>
+                            <li>I Do Wedding Magazine Awards 2024 </li>
+                            <li>Best Florist In The Midlands</li>
+                        </ul>
+                    </div>
+                    <div>
                         <p className='font-semibold'>Award Nominated</p>
                         <ul className='italic'>
                             <li>Muddy Stiletto Awards 2023 - Finalist</li>
@@ -49,6 +65,22 @@ export default function AboutUs({}: {}) {
                     </div>
                 </article>
             </Callout>
+            {/* <Container className='grid px-0 md:grid-cols-2'>
+                <Image
+                    filename='winner_image_nkzsu5'
+                    path='fleursfloristry/about'
+                    width={1200}
+                    className='h-full w-full object-cover'
+                    alt='about1'
+                />
+                <Image
+                    filename='Photo_17-03-2024_13_06_02-min_jiuzba'
+                    path='fleursfloristry/about'
+                    width={1200}
+                    className='h-full w-full object-cover'
+                    alt='about2'
+                />
+            </Container> */}
         </>
     );
 }
