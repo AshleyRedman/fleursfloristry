@@ -56,7 +56,7 @@ function Entry({
     ...rest
 }: Pick<TestimonialType, 'author' | 'body' | 'link'> & HTMLAttributes<HTMLDivElement>) {
     return (
-        <article {...rest} className={cn('space-y-6 bg-gray p-8', rest.className)}>
+        <article {...rest} className={cn('space-y-6 bg-green/60 p-8', rest.className)}>
             <Quote size={24} />
             <blockquote className='italic leading-loose'>
                 <p className='px-4'>{body}</p>
@@ -65,7 +65,7 @@ function Entry({
                 {!!link ? (
                     <Link
                         href={link}
-                        className='underline decoration-peach-light decoration-2 underline-offset-2'
+                        className='underline decoration-black decoration-2 underline-offset-2'
                     >
                         {author}
                     </Link>

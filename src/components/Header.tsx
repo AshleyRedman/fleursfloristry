@@ -43,8 +43,8 @@ function Item({ label, href }: NavItem) {
     return (
         <li
             className={cn(
-                'border-y-2 border-black/30 text-center font-serif text-base font-medium italic text-black/60 transition-all duration-300 ease-in-out hover:border-black hover:text-black 2xl:min-w-[80px] 2xl:text-lg',
-                pathname === href && 'border-black text-black'
+                'border-y-2 border-green/30 text-center font-serif text-base font-medium italic text-black/60 transition-all duration-300 ease-in-out hover:border-green hover:text-black 2xl:min-w-[80px] 2xl:text-lg',
+                pathname === href && 'border-green/80 text-black'
             )}
         >
             <Link href={href} className='block px-1 py-3 2xl:px-6'>

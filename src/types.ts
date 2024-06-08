@@ -19,6 +19,7 @@ export type Image = { src: string; alt: string };
 export type GalleryEntry = {
     heading: string;
     subHeading: string;
+    meta?: string;
     cover: CDNImage;
     items: CDNImage[];
 };

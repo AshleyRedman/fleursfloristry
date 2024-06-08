@@ -1,9 +1,9 @@
-import { Facebook, Instagram, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
-import { cloudinary } from '../lib/cdn';
 import Container from './Container';
 import Link from './Link';
 import Image from './Image';
+import { Facebook, Instagram } from './BrandIcons';
 
 export default function Footer({}: {}) {
     return (
@@ -20,7 +20,7 @@ export default function Footer({}: {}) {
                     </span>
                 </div>
 
-                <ul className='flex items-center space-x-4'>
+                <ul className='flex items-center space-x-3'>
                     <li>
                         <Link
                             href='mailto:enquiries@fleursfloristry.com'
@@ -36,12 +36,16 @@ export default function Footer({}: {}) {
                             external
                             className='block'
                         >
-                            <Facebook size={24} className='stroke-peach-default' />
+                            <Facebook className='size-[24px] fill-peach-default' />
                         </Link>
                     </li>
                     <li>
-                        <Link href='https://www.instagram.com/fleursfloristry/' className='block'>
-                            <Instagram size={24} className='stroke-peach-default' />
+                        <Link
+                            href='https://www.instagram.com/fleursfloristry/'
+                            external
+                            className='block'
+                        >
+                            <Instagram className='size-[24px] fill-peach-default' />
                         </Link>
                     </li>
                 </ul>
