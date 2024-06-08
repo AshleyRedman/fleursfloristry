@@ -2,12 +2,12 @@
 import { GalleryEntry } from '@/src/types';
 
 const src = [
+    'GARRETT-336-min_pt7a3k',
     'GARRETT-6-min_hp4xne',
     'GARRETT-369-min_p7fcsc',
     'GARRETT-402-min_uhnc4s',
     'GARRETT-344-min_eob30g',
     'GARRETT-195-min_datrdr',
-    'GARRETT-336-min_pt7a3k',
     'GARRETT-15-min_nj3zbk',
     'GARRETT-min_fdfswr',
     'GARRETT-386-min_bscbjz',
