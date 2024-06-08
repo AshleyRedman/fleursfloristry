@@ -8,19 +8,19 @@ import { Facebook, Instagram } from './BrandIcons';
 export default function Footer({}: {}) {
     return (
         <footer className='mt-8'>
-            <Container className='flex items-center justify-between pb-16 pt-10'>
-                <div className='flex items-baseline space-x-8'>
-                    <span className='font-serif text-3xl text-peach-default'>
+            <Container className='items-center justify-between pb-16 pt-10 md:flex'>
+                <div className='items-baseline md:flex md:space-x-8'>
+                    <span className='block font-serif text-3xl text-peach-default'>
                         Fleur&apos;s Floristry
                     </span>
 
-                    <span className='font-sans text-sm font-medium text-green'>
+                    <span className='mt-4 block font-sans text-sm font-medium text-green md:mt-0'>
                         I Do Wedding Magazine Awards Winner{' '}
                         <span className='font-light'>(2024)</span>
                     </span>
                 </div>
 
-                <ul className='flex items-center space-x-3'>
+                <ul className='mt-8 flex items-center space-x-3 md:mt-0'>
                     <li>
                         <Link
                             href='mailto:enquiries@fleursfloristry.com'
