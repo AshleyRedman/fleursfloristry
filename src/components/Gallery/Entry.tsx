@@ -16,10 +16,16 @@ export function Entry({ entry }: { entry: GalleryEntry }) {
             onClick={() => setOpen(true)}
             className='group relative mb-3 w-full rounded bg-green'
         >
-            <div className='absolute bottom-0 w-full space-y-4 bg-green/85 px-2 py-8 2xl:py-12'>
-                <h3 className='text-center font-serif text-3xl font-bold'>{entry.heading}</h3>
+            <div className='absolute bottom-0 w-full space-y-4 bg-green/85 px-2 py-8 text-white 2xl:py-8'>
+                <h3 className='text-center font-serif text-3xl font-bold text-gray'>
+                    {entry.heading}
+                </h3>
                 <h4 className='text-center text-lg opacity-75'>{entry.subHeading}</h4>
-                {!!entry.meta && <span className='text-center opacity-75'>{entry.meta}</span>}
+                {!!entry.meta && (
+                    <span className='mx-auto block min-h-[40px] w-[80%] text-center text-sm opacity-75'>
+                        {entry.meta}
+                    </span>
+                )}
             </div>
             <Image width={800} className='w-full object-cover' {...entry.cover} />
             <LightBox open={open} setOpen={setOpen} images={entry.items} />
