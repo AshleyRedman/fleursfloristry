@@ -39,7 +39,7 @@ export default function Prices({}: {}) {
             <ProductListing
                 title='Venue decor'
                 subheading='From Moon Gate Arches To Cake Poses And Every Room In Between'
-                image={cloudinary('Venuedecor_e3ojxh', 'fleursfloristry', 'png', 1920)}
+                // image={cloudinary('Venuedecor_e3ojxh', 'fleursfloristry', 'png', 1920)}
                 bgImage={cloudinary('banner_bnuaw0', 'fleursfloristry', 'png', 1920)}
                 entires={[
                     { label: 'Cake decor', price: 12 },
