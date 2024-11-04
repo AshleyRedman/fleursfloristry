@@ -17,7 +17,7 @@ import { Metadata, ResolvingMetadata } from 'next';
 
 const GalleryEntries: GalleryEntry[] = [
     Jessica_Jack,
-    Zoe_Kevin,
+    Ashleigh_Tom,
     Rae_Matt,
     Deborah_Sam,
     Leah_Bill,
@@ -25,7 +25,7 @@ const GalleryEntries: GalleryEntry[] = [
     Polly_Thomas,
     Tony_Shari,
     October_Wedding,
-    Ashleigh_Tom
+    Zoe_Kevin
 ];
 
 export const generateMetadata = async (

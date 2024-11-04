@@ -1,6 +1,6 @@
 import { GalleryEntry } from '@/src/types';
 
-const alt = 'Zoe_Kevin';
+const alt = 'Zoe & Kevin';
 const path = 'fleursfloristry/gallery/Zoe_Kevin';
 
 export const Zoe_Kevin: GalleryEntry = {
