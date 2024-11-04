@@ -19,7 +19,7 @@ export const generateMetadata = async (
     };
 };
 
-export default function Contact({}: {}) {
+export default function Contact(_: PageProps<never>) {
     return (
         <>
             <section className='py-12'>

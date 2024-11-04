@@ -22,12 +22,17 @@ export function Entry({ entry }: { entry: GalleryEntry }) {
                 </h3>
                 <h4 className='text-center text-lg opacity-75'>{entry.subHeading}</h4>
                 {!!entry.meta && (
-                    <span className='mx-auto block min-h-[40px] w-[80%] text-center text-sm opacity-75'>
+                    <span className='mx-auto block min-h-[40px] w-4/5 text-center text-sm opacity-75'>
                         {entry.meta}
                     </span>
                 )}
             </div>
-            <Image width={800} className='w-full object-cover' {...entry.cover} />
+            <Image
+                width={800}
+                className='w-full object-cover'
+                {...entry.cover}
+                alt={entry.cover.alt}
+            />
             <LightBox open={open} setOpen={setOpen} images={entry.items} />
         </Button>
     );

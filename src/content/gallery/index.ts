@@ -4,3 +4,7 @@ export * from './polly_thomas';
 export * from './tony_shari';
 export * from './october_wedding';
 export * from './ashleigh_tom';
+export * from './rae_matt';
+export * from './jessica_jack';
+export * from './deborah_sam';
+export * from './zoe_kevin';

@@ -22,6 +22,7 @@ export default function Image({
                 src={cloudinary(filename, path, 'png', width)}
                 width={width}
                 aria-label={alt}
+                alt={alt}
                 className={cn('', rest.className)}
                 loading={loading}
             />

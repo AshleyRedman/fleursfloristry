@@ -133,7 +133,7 @@ export const generateMetadata = async (
     };
 };
 
-export default function Testimonials() {
+export default function Testimonials(_: PageProps<never>) {
     return (
         <>
             <section className='my-8 lg:my-16'>

@@ -1,9 +1,6 @@
 import { PageProps } from '@/src/types';
-import Callout from '../../components/Callout';
 import { Metadata, ResolvingMetadata } from 'next';
-import { cloudinary } from '@/src/lib/cdn';
-import Image from '@/src/components/Image';
-import Container from '@/src/components/Container';
+import Callout from '../../components/Callout';
 
 export const generateMetadata = async (
     _: PageProps<{ slug: string }>,
@@ -18,7 +15,7 @@ export const generateMetadata = async (
     };
 };
 
-export default function AboutUs({}: {}) {
+export default function AboutUs(_: PageProps<never>) {
     return (
         <>
             <Callout

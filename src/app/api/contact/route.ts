@@ -1,8 +1,9 @@
-import { Form } from '@/src/types';
-import { base, send } from '../../../lib/mail';
 import { env } from '@/src/lib/env';
+import { Form } from '@/src/types';
+import { NextResponse } from 'next/server';
+import { base, send } from '../../../lib/mail';
 
-export async function POST(request: Request, _: Response) {
+export async function POST(request: Request) {
     try {
         const to = env.MAIL_TO;
         const { name, partner, email, phone, address, date, message }: Form = await request.json();
@@ -17,7 +18,7 @@ export async function POST(request: Request, _: Response) {
         const messageRow = message ? `<tr><td>Phone: </td><td>${message}</td></tr>` : '';
 
         const html = base({
-            body: `<table>${nameRow}${emailRow}${phoneRow}${addressRow}${dateRow}${messageRow}</table>`,
+            body: `<table>${nameRow}${partnerRow}${emailRow}${phoneRow}${addressRow}${dateRow}${messageRow}</table>`,
             subject
         });
 
@@ -33,11 +34,11 @@ export async function POST(request: Request, _: Response) {
             throw new Error('Email failed to send.');
         }
 
-        return new Response(JSON.stringify({ success: true }), {
+        return new NextResponse(JSON.stringify({ success: true }), {
             status: 200
         });
     } catch (e) {
-        return new Response(JSON.stringify({ success: false }), {
+        return new NextResponse(JSON.stringify({ success: false }), {
             status: 500
         });
     }

@@ -6,12 +6,20 @@ import {
     Leah_Bill,
     October_Wedding,
     Polly_Thomas,
-    Tony_Shari
+    Tony_Shari,
+    Rae_Matt,
+    Jessica_Jack,
+    Deborah_Sam,
+    Zoe_Kevin
 } from '@/src/content/gallery';
 import { GalleryEntry, PageProps } from '@/src/types';
 import { Metadata, ResolvingMetadata } from 'next';
 
 const GalleryEntries: GalleryEntry[] = [
+    Jessica_Jack,
+    Zoe_Kevin,
+    Rae_Matt,
+    Deborah_Sam,
     Leah_Bill,
     Fran_Adam,
     Polly_Thomas,
@@ -33,7 +41,7 @@ export const generateMetadata = async (
     };
 };
 
-export default function Gallery() {
+export default function Gallery(_: PageProps<never>) {
     return (
         <>
             <section className='my-8 lg:my-16'>

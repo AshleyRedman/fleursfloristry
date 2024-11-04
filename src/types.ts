@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
 export type PageProps<T> = {
-    params?: T;
-    searchParams: { [key: string]: string | string[] | undefined };
+    params?: Promise<T>;
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export type NavItem = { label: string; href: string };

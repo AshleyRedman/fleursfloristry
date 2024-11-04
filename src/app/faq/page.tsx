@@ -45,7 +45,7 @@ export const generateMetadata = async (
     };
 };
 
-export default function FAQ() {
+export default function FAQ(_: PageProps<never>) {
     return (
         <>
             <section className='relative bg-white py-12'>
