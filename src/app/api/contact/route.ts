@@ -15,7 +15,7 @@ export async function POST(request: Request) {
         const phoneRow = `<tr><td>Phone: </td><td>${phone}</td></tr>`;
         const addressRow = address ? `<tr><td>Address: </td><td>${address}</td></tr>` : '';
         const dateRow = date ? `<tr><td>Date: </td><td>${date}</td></tr>` : '';
-        const messageRow = message ? `<tr><td>Phone: </td><td>${message}</td></tr>` : '';
+        const messageRow = message ? `<tr><td>Message: </td><td>${message}</td></tr>` : '';
 
         const html = base({
             body: `<table>${nameRow}${partnerRow}${emailRow}${phoneRow}${addressRow}${dateRow}${messageRow}</table>`,
