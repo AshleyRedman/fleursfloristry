@@ -3,31 +3,11 @@ import { createTransport, SendMailOptions, SentMessageInfo } from 'nodemailer';
 import sendGrid from 'nodemailer-sendgrid';
 
 const transporter = () => {
-    let config = {};
-
-    switch (env.STAGE) {
-        case 'production': {
-            config = sendGrid({
-                apiKey: env.SENDGRID_API_KEY
-            });
-            break;
-        }
-        case 'development': {
-            if (env.IS_LOCAL) {
-                config = {
-                    host: env.DEV_MAIL_HOST,
-                    port: env.DEV_MAIL_PORT
-                };
-            } else {
-                config = sendGrid({
-                    apiKey: env.SENDGRID_API_KEY
-                });
-            }
-            break;
-        }
-    }
-
-    const transport = createTransport(config);
+    const transport = createTransport(
+        sendGrid({
+            apiKey: env.SENDGRID_API_KEY
+        })
+    );
 
     return {
         transport,

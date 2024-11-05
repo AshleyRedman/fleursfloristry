@@ -10,7 +10,7 @@ export async function POST(request: Request) {
         const subject = `Contact form submission from ${email}`;
 
         const nameRow = `<tr><td>Name: </td><td>${name}</td></tr>`;
-        const partnerRow = `<tr><td>Name: </td><td>${partner}</td></tr>`;
+        const partnerRow = `<tr><td>Partner: </td><td>${partner}</td></tr>`;
         const emailRow = `<tr><td>Email: </td><td>${email}</td></tr>`;
         const phoneRow = `<tr><td>Phone: </td><td>${phone}</td></tr>`;
         const addressRow = address ? `<tr><td>Address: </td><td>${address}</td></tr>` : '';

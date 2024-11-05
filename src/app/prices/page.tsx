@@ -22,11 +22,11 @@ export default function Prices(_: PageProps<never>) {
             <ProductListing
                 title='Wedding Florals'
                 subheading='From Bridal Bouquets To Groomsman Buttonholes & All Things In Between.'
-                image={cloudinary('WeddingFlorals_vgtbur', 'fleursfloristry', 'png', 1920)}
+                image={cloudinary('n_ythnto', 'fleursfloristry', 'png', 1920)}
                 bgImage={cloudinary('Natalie_Dickinson_y7mspr', 'fleursfloristry', 'webp', 1920)}
                 entires={[
                     { label: 'Bridal Bouquet', price: 85 },
-                    { label: 'Bridesmaid Bouquets', price: 35 },
+                    { label: 'Bridesmaid Bouquets', price: 45 },
                     { label: 'Flower Girl Wands, Hoops & Bouquets', price: 14 },
                     { label: 'Grooms Buttonhole', price: 9 },
                     { label: 'Groomsman Buttonholes', price: 9 },
@@ -39,7 +39,7 @@ export default function Prices(_: PageProps<never>) {
             <ProductListing
                 title='Venue decor'
                 subheading='From Moon Gate Arches To Cake Poses And Every Room In Between'
-                image={cloudinary('n_ythnto', 'fleursfloristry', 'png', 1920)}
+                image={cloudinary('WeddingFlorals_vgtbur', 'fleursfloristry', 'png', 1920)}
                 bgImage={cloudinary('banner_bnuaw0', 'fleursfloristry', 'png', 1920)}
                 entires={[
                     { label: 'Cake decor', price: 12 },

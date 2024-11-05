@@ -31,8 +31,8 @@ export default function Contact(_: PageProps<never>) {
                         <p className='mx-auto w-4/5'>
                             As no event is the same, please don&apos;t hesitate to contact us with
                             any questions, comments or special requests that you may have. Please
-                            also use this form to in order to contact us rgerading your bespoke
-                            wedding package.
+                            also use this form in order to contact us regarding your bespoke wedding
+                            package.
                         </p>
                         <p>Asfordby, Melton Mowbray</p>
                         <a href='mailto:enquiries@fleursfloristry.com' className='block underline'>
