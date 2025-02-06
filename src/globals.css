@@ -1,6 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+
+@theme {
+    --color-*: initial;
+    --color-transparent: transparent;
+    --color-white: #ffffff;
+    --color-black: #1e1e1c;
+    --color-green: #6b766b;
+    --color-gray: #e0e3e0;
+
+    --color-peach-light: #d89792;
+    --color-peach-default: #b95332;
+    --color-peach-dark: #7e3c22;
+
+    --font-*: initial;
+    --font-sans: Raleway, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: courier new, ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
 
 @layer base {
     ::selection {

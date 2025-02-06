@@ -11,7 +11,7 @@ export default function Callout({
     children: ReactNode;
 } & HTMLAttributes<HTMLDivElement>) {
     return (
-        <section className='grid bg-green/60 lg:grid-cols-2'>
+        <section className='bg-green/60 grid lg:grid-cols-2'>
             <article
                 {...rest}
                 className={cn(

@@ -8,13 +8,13 @@ import { Facebook, Instagram } from './BrandIcons';
 export default function Footer({}: {}) {
     return (
         <footer className='mt-8'>
-            <Container className='items-center justify-between pb-16 pt-10 md:flex'>
+            <Container className='items-center justify-between pt-10 pb-16 md:flex'>
                 <div className='items-baseline md:flex md:space-x-8'>
-                    <span className='block font-serif text-3xl text-peach-default'>
+                    <span className='text-peach-default block font-serif text-3xl'>
                         Fleur&apos;s Floristry
                     </span>
 
-                    <span className='mt-4 block font-sans text-sm font-medium text-green md:mt-0'>
+                    <span className='text-green mt-4 block font-sans text-sm font-medium md:mt-0'>
                         I Do Wedding Magazine Awards Winner{' '}
                         <span className='font-light'>(2024)</span>
                     </span>
@@ -36,7 +36,7 @@ export default function Footer({}: {}) {
                             external
                             className='block'
                         >
-                            <Facebook className='size-[24px] fill-peach-default' />
+                            <Facebook className='fill-peach-default size-[24px]' />
                         </Link>
                     </li>
                     <li>
@@ -45,27 +45,27 @@ export default function Footer({}: {}) {
                             external
                             className='block'
                         >
-                            <Instagram className='size-[24px] fill-peach-default' />
+                            <Instagram className='fill-peach-default size-[24px]' />
                         </Link>
                     </li>
                 </ul>
             </Container>
             <div className='bg-green/60 py-6'>
-                <Container className='items-center justify-between space-y-8 md:flex md:space-x-10 md:space-y-0'>
+                <Container className='items-center justify-between space-y-8 md:flex md:space-y-0 md:space-x-10'>
                     <div className='flex items-center space-x-5'>
                         <Image
                             filename='winners_vs2bhc'
                             alt='winners'
                             path='fleursfloristry/logos'
                             width={80}
-                            className='rounded'
+                            className='rounded-sm'
                         />
                         <Image
                             filename='finalist_fkmsfa'
                             alt='finalisr'
                             path='fleursfloristry/logos'
                             width={80}
-                            className='rounded'
+                            className='rounded-sm'
                         />
                     </div>
                     <div>

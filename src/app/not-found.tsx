@@ -19,7 +19,7 @@ export default function NotFound({}: {}) {
     return (
         <section className='py-24'>
             <Container className='lg:px-48 2xl:px-96'>
-                <h1 className='text-center font-serif text-4xl font-medium text-peach-default'>
+                <h1 className='text-peach-default text-center font-serif text-4xl font-medium'>
                     Page not found
                 </h1>
             </Container>

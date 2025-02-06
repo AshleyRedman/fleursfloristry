@@ -24,7 +24,7 @@ const faqs: FAQ[] = [
     },
     {
         title: 'Keepsakes for all',
-        body: "There isn't much that you can physically bring away from your big day to keep and cherish for years to come. You have your photos and your ring, but with silk, you can now have your arrangements to admire too. Whether that's your stage decor, a single centrepiece, or a box framed bouquet, the possibilities in re-loved flowers are endless. They also make great gifts for after your wedding for your family or bridal party!"
+        body: "There isn't much that you can physically bring away from your big day to keep and cherish for years to come. You have your photos and your ring-3, but with silk, you can now have your arrangements to admire too. Whether that's your stage decor, a single centrepiece, or a box framed bouquet, the possibilities in re-loved flowers are endless. They also make great gifts for after your wedding for your family or bridal party!"
     },
     {
         title: 'Whatever the weather',
@@ -56,16 +56,16 @@ export default function FAQ(_: PageProps<never>) {
                     className='absolute inset-0 bg-cover bg-bottom bg-no-repeat opacity-20'
                 />
                 <Container className=''>
-                    <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
+                    <h3 className='text-peach-default text-center font-serif text-4xl font-medium'>
                         Why Artificial Flowers
                     </h3>
-                    <h4 className='my-4 text-center text-xl font-light italic leading-relaxed text-green'>
+                    <h4 className='text-green my-4 text-center text-xl leading-relaxed font-light italic'>
                         A few little things that you may not have considered
                     </h4>
                     <div className='mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0'>
                         {faqs.map((f) => (
                             <article key={f.title} className='space-y-4 lg:p-8 2xl:p-16'>
-                                <h5 className='font-serif text-2xl text-peach-default'>
+                                <h5 className='text-peach-default font-serif text-2xl'>
                                     {f.title}
                                 </h5>
                                 <p className='leading-loose'>{f.body}</p>

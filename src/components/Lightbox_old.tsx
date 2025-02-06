@@ -45,7 +45,7 @@ export default function Lightbox({
                     >
                         <Button
                             onPress={() => setOpen(false)}
-                            className='absolute right-4 top-4 z-50 !rounded-full bg-white p-2'
+                            className='absolute top-4 right-4 z-50 rounded-full! bg-white p-2'
                         >
                             <X size={28} />
                         </Button>
@@ -53,7 +53,7 @@ export default function Lightbox({
                             filename={image.src}
                             alt={image.alt}
                             width={1920}
-                            className='mx-4 h-auto w-[calc(100%-32px)] rounded md:h-[calc(100vh-180px)]'
+                            className='mx-4 h-auto w-[calc(100%-32px)] rounded-sm md:h-[calc(100vh-180px)]'
                         />
                         <div className='absolute inset-0 -z-10 bg-black/50' />
                     </motion.div>

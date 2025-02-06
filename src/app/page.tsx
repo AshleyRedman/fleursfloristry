@@ -16,10 +16,10 @@ export default function Home() {
             <section className='mb-6 lg:mb-16'>
                 <Container>
                     <div className='px-0 py-8 text-center lg:px-48'>
-                        <h3 className='mb-4 mt-2 font-serif text-4xl tracking-tighter text-peach-light md:mt-8 lg:text-5xl lg:leading-tight'>
+                        <h3 className='text-peach-light mt-2 mb-4 font-serif text-4xl tracking-tighter md:mt-8 lg:text-5xl lg:leading-tight'>
                             Pop me a message to start designing your dream wedding florals today
                         </h3>
-                        <h4 className='my-8 text-xl font-light italic leading-relaxed text-green'>
+                        <h4 className='text-green my-8 text-xl leading-relaxed font-light italic'>
                             From bouquets to banquets, we can provide florals for all occasions no
                             matter how big or small.
                         </h4>
@@ -57,7 +57,7 @@ export default function Home() {
                     minHeight: 300
                 }}
             >
-                <h3 className='font-serif text-4xl font-light uppercase leading-none'>About us</h3>
+                <h3 className='font-serif text-4xl leading-none font-light uppercase'>About us</h3>
                 <p className='leading-loose lg:w-2/3'>
                     Fleur&apos;s Floristry is a luxury floral business based in the heart of rural
                     Leicestershire. We pride ourselves on creating beautifully bespoke arrangements
@@ -66,7 +66,7 @@ export default function Home() {
                     create pieces that will last a lifetime and remain a stunning keepsake for years
                     to come. Why not take a look at the services we can offer you.
                 </p>
-                <div className='space-y-4 lg:space-x-3 lg:space-y-0'>
+                <div className='space-y-4 lg:space-y-0 lg:space-x-3'>
                     <StyledButton link href='/about-us' className=''>
                         Learn more
                     </StyledButton>

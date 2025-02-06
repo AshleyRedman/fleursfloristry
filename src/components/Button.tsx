@@ -12,7 +12,7 @@ export default function Button({
     let { buttonProps } = useButton(rest, ref);
 
     return (
-        <button {...buttonProps} ref={ref} className={cn('outline-none', rest.className)}>
+        <button {...buttonProps} ref={ref} className={cn('outline-hidden', rest.className)}>
             {rest.children}
         </button>
     );
@@ -29,7 +29,7 @@ export function StyledButton({
             <Link
                 href={href}
                 className={cn(
-                    'inline-flex rounded-none bg-peach-light px-6 py-2 text-center tracking-wide text-white transition-colors duration-300 ease-in-out hover:bg-peach-default',
+                    'bg-peach-light hover:bg-peach-default inline-flex rounded-none px-6 py-2 text-center tracking-wide text-white transition-colors duration-300 ease-in-out',
                     rest.className
                 )}
             >
@@ -42,7 +42,7 @@ export function StyledButton({
         <Button
             {...rest}
             className={cn(
-                'inline-flex rounded-none bg-peach-light px-6 py-2 text-center tracking-wide text-white transition-colors duration-300 ease-in-out hover:bg-peach-default',
+                'bg-peach-light hover:bg-peach-default inline-flex rounded-none px-6 py-2 text-center tracking-wide text-white transition-colors duration-300 ease-in-out',
                 rest.className
             )}
         >

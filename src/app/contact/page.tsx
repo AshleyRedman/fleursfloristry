@@ -24,10 +24,10 @@ export default function Contact(_: PageProps<never>) {
         <>
             <section className='py-12'>
                 <Container className='lg:px-48 2xl:px-96'>
-                    <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
+                    <h3 className='text-peach-default text-center font-serif text-4xl font-medium'>
                         Contact us
                     </h3>
-                    <article className='mb-12 mt-8 space-y-6 text-center'>
+                    <article className='mt-8 mb-12 space-y-6 text-center'>
                         <p className='mx-auto w-4/5'>
                             As no event is the same, please don&apos;t hesitate to contact us with
                             any questions, comments or special requests that you may have. Please

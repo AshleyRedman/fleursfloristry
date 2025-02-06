@@ -25,10 +25,10 @@ export default function ProductListing({
                 />
                 <Container>
                     <div className='px-0 py-8 text-center lg:px-48'>
-                        <h3 className='font-serif text-4xl text-peach-light lg:text-7xl lg:leading-normal'>
+                        <h3 className='text-peach-light font-serif text-4xl lg:text-7xl lg:leading-normal'>
                             {title}
                         </h3>
-                        <h4 className='my-4 text-xl font-light italic leading-relaxed text-green'>
+                        <h4 className='text-green my-4 text-xl leading-relaxed font-light italic'>
                             {subheading}
                         </h4>
                         <div className='my-8 space-y-6'>
@@ -37,7 +37,7 @@ export default function ProductListing({
                                 {entires.map((e) => (
                                     <li key={e.label}>
                                         {e.label} - from{' '}
-                                        <span className='font-semibold text-peach-light'>
+                                        <span className='text-peach-light font-semibold'>
                                             £{e.price}
                                         </span>
                                     </li>
@@ -53,7 +53,7 @@ export default function ProductListing({
             {!!image && (
                 <div
                     style={{ backgroundImage: `url(${image})` }}
-                    className='h-[250px] w-full bg-green bg-cover bg-center bg-no-repeat lg:h-[675px] lg:bg-fixed'
+                    className='bg-green h-[250px] w-full bg-cover bg-center bg-no-repeat lg:h-[675px] lg:bg-fixed'
                 />
             )}
         </section>

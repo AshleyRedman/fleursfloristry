@@ -24,7 +24,7 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
         <>
             <Button
                 onPress={() => setOpen(true)}
-                className='fixed right-4 top-2 z-30 block rounded-full bg-white p-2 lg:hidden'
+                className='fixed top-2 right-4 z-30 block rounded-full bg-white p-2 lg:hidden'
             >
                 <Menu size={28} className='stroke-peach-default' />
             </Button>
@@ -44,11 +44,11 @@ export default function MobileMenu({ items }: { items: NavItem[] }) {
                                 animate={{ x: 0 }}
                                 exit={{ x: '100%' }}
                                 transition={{ duration: 0.25, bounce: 0 }}
-                                className='fixed right-0 top-0 z-40 block h-full w-2/3 bg-white px-10 pt-24 shadow lg:hidden'
+                                className='fixed top-0 right-0 z-40 block h-full w-2/3 bg-white px-10 pt-24 shadow-sm lg:hidden'
                             >
                                 <Button
                                     onPress={() => setOpen(false)}
-                                    className='fixed right-10 top-4 z-40 block lg:hidden'
+                                    className='fixed top-4 right-10 z-40 block lg:hidden'
                                 >
                                     <AlignRight size={28} className='stroke-peach-default' />
                                 </Button>

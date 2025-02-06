@@ -13,7 +13,7 @@ export default function Link({
             target={external ? '_blank' : '_self'}
             rel={external ? 'noopener noreferrer' : undefined}
             className={cn(
-                'outline-none ring-peach-default focus-visible:rounded focus-visible:ring',
+                'ring-peach-default outline-hidden focus-visible:rounded-sm focus-visible:ring-3',
                 rest.className
             )}
         >

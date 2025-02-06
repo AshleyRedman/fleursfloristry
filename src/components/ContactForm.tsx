@@ -65,7 +65,7 @@ export default function ContactForm() {
                                 placeholder='Your full name here...'
                                 {...register('name')}
                                 className={cn(
-                                    'block w-full border-2 outline-none',
+                                    'block w-full border-2 outline-hidden',
                                     formState.errors.name ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
@@ -83,7 +83,7 @@ export default function ContactForm() {
                                 placeholder='Your partners full name here...'
                                 {...register('partner')}
                                 className={cn(
-                                    'block w-full border-2 outline-none',
+                                    'block w-full border-2 outline-hidden',
                                     formState.errors.name ? 'border-peach-dark' : 'border-gray'
                                 )}
                             />
@@ -177,13 +177,13 @@ export default function ContactForm() {
                         </label>
                     </div>
                     {!!formState.errors.root && (
-                        <span className='block text-center font-medium text-peach-dark'>
+                        <span className='text-peach-dark block text-center font-medium'>
                             {formState.errors.root.message}
                         </span>
                     )}
                     <StyledButton
                         type='submit'
-                        className='ml-auto mr-0 flex bg-black text-white'
+                        className='mr-0 ml-auto flex bg-black text-white'
                         disabled={submitting}
                     >
                         {submitting ? 'Sending...' : 'Send'}
@@ -206,11 +206,11 @@ export default function ContactForm() {
 function Title({ label, required }: { label: string; required?: boolean }) {
     return (
         <span className='mb-2 block'>
-            {label} {required && <span className='text-xl text-peach-default'>*</span>}
+            {label} {required && <span className='text-peach-default text-xl'>*</span>}
         </span>
     );
 }
 
 function Error({ message }: { message?: string }) {
-    return <span className='my-2 block text-right font-semibold text-peach-dark'>{message}</span>;
+    return <span className='text-peach-dark my-2 block text-right font-semibold'>{message}</span>;
 }

@@ -46,7 +46,7 @@ export default function Gallery(_: PageProps<never>) {
         <>
             <section className='my-8 lg:my-16'>
                 <Container>
-                    <h3 className='text-center font-serif text-4xl font-medium text-peach-default'>
+                    <h3 className='text-peach-default text-center font-serif text-4xl font-medium'>
                         Gallery
                     </h3>
                 </Container>

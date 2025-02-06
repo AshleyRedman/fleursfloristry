@@ -14,10 +14,10 @@ export function Entry({ entry }: { entry: GalleryEntry }) {
         <Button
             type='button'
             onClick={() => setOpen(true)}
-            className='group relative mb-3 w-full rounded bg-green'
+            className='group bg-green relative mb-3 w-full rounded-sm'
         >
-            <div className='absolute bottom-0 w-full space-y-4 bg-green/85 px-2 py-8 text-white 2xl:py-8'>
-                <h3 className='text-center font-serif text-3xl font-bold text-gray'>
+            <div className='bg-green/85 absolute bottom-0 w-full space-y-4 px-2 py-8 text-white 2xl:py-8'>
+                <h3 className='text-gray text-center font-serif text-3xl font-bold'>
                     {entry.heading}
                 </h3>
                 <h4 className='text-center text-lg opacity-75'>{entry.subHeading}</h4>

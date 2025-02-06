@@ -28,10 +28,10 @@ export default function AboutUs(_: PageProps<never>) {
                     minHeight: 500
                 }}
             >
-                <h3 className='text-center font-serif text-4xl font-light leading-none'>
+                <h3 className='text-center font-serif text-4xl leading-none font-light'>
                     Our Beginnings
                 </h3>
-                <article className='mx-auto space-y-10 text-center font-light leading-loose lg:w-2/3'>
+                <article className='mx-auto space-y-10 text-center leading-loose font-light lg:w-2/3'>
                     <p>
                         Fleur&apos;s Floristry was founded after owner and designer Emily, found a
                         passion for faux floristry within her own wedding planning.
