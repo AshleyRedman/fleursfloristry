@@ -15,8 +15,9 @@
     --color-peach-dark: #7e3c22;
 
     --font-*: initial;
-    --font-sans: Raleway, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        Raleway, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
     --font-serif: courier new, ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
 }
 
