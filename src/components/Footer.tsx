@@ -67,6 +67,13 @@ export default function Footer({}: {}) {
                             width={80}
                             className='rounded-sm'
                         />
+                        <Image
+                            filename='xqgshg2dz7nvyrhuhlps'
+                            alt='finalisr'
+                            path='fleursfloristry/logos'
+                            width={80}
+                            className='rounded-sm'
+                        />
                     </div>
                     <div>
                         <small className='block font-medium text-black'>
